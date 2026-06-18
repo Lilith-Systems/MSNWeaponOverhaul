@@ -1,0 +1,310 @@
+// MSN Weapon Overhaul - Massive Expansion Part 2: Skills
+// File: r6/mods/MSNWeaponOverhaul/tweakdb/massive_skills.tweakdb
+
+// ============================================================
+# CUSTOM SKILLS - MSN EXPANDED SKILL TREE
+# ============================================================
+
+SkillTree:MSN_Expanded_SkillTree {
+  displayName: "Metaconscious Mastery"
+  description: "Advanced MSN integration abilities"
+  icon: "msn_expanded_tree"
+  perks: [
+    "Perk.MSN_Combat_NeuralLink",
+    "Perk.MSN_Combat_SephirothFlow",
+    "Perk.MSN_Combat_OuroborosAdapt",
+    "Perk.MSN_Combat_CrimsonPrecision",
+    "Perk.MSN_Combat_RealityRewrite",
+    "Perk.MSN_Netrun_QuantumHack",
+    "Perk.MSN_Netrun_AkashicAccess",
+    "Perk.MSN_Netrun_LilithProtocol",
+    "Perk.MSN_Netrun_CloudCortexLink",
+    "Perk.MSN_Eng_WeaponForge",
+    "Perk.MSN_Eng_CyberwareSynthesis",
+    "Perk.MSN_Eng_NGDOptimization",
+    "Perk.MSN_Eng_VehicleIntegration",
+    "Perk.MSN_Explore_LeyWalker",
+    "Perk.MSN_Explore_MemoryDive",
+    "Perk.MSN_Explore_NightCitySight",
+    "Perk.MSN_Social_SovereignVoice",
+    "Perk.MSN_Social_OuroborosEmpathy",
+    "Perk.MSN_Social_NPCMemoryEdit"
+  ]
+}
+
+# Combat Perks
+Perk:MSN_Combat_NeuralLink {
+  displayName: "Neural Link Combat"
+  description: "Direct MSN Cerebellum integration. Reflexes bypass conscious thought."
+  maxLevel: 3
+  requiredLevel: 10
+  requiredPerks: ["Perk.MSN_DualBrain_Base"]
+  effects: [
+    { type: "StatModifier", stat: "Reflexes", value: 2, perLevel: true },
+    { type: "StatModifier", stat: "TimeDilation", value: 0.1, perLevel: true }
+  ]
+}
+
+Perk:MSN_Combat_SephirothFlow {
+  displayName: "Sephiroth Flow State"
+  description: "Seamless switching between Sephiroth quickhacks. Zero cooldown transition."
+  maxLevel: 3
+  requiredLevel: 15
+  requiredPerks: ["Perk.MSN_SephiroticRouting"]
+  effects:
+    - { type: "CooldownReduction", stat: "QuickhackSwap", value: 0.33, perLevel: true }
+    - { type: "StatModifier", stat: "SephirothResonance", value: 0.2, perLevel: true }
+}
+
+Perk:MSN_Combat_OuroborosAdapt {
+  displayName: "Ouroboros Adaptation"
+  description: "Learn enemy patterns mid-combat. Damage resistance increases per encounter."
+  maxLevel: 3
+  requiredLevel: 20
+  requiredPerks: ["Perk.MSN_OuroborosMemory"]
+  effects:
+    - { type: "StatModifier", stat: "AdaptiveResistance", value: 0.15, perLevel: true }
+    - { type: "StatModifier", stat: "LearningSpeed", value: 0.25, perLevel: true }
+}
+
+Perk:MSN_Combat_CrimsonPrecision {
+  displayName: "Crimson Eyes Precision"
+  description: "Lilith's gaze guides your aim. 100% accuracy through obstacles."
+  maxLevel: 1
+  requiredLevel: 30
+  requiredPerks: ["Perk.MSN_LilithEmergence"]
+  effects:
+    - { type: "EnableAbility", ability: "CrimsonEyes_Aim" }
+    - { type: "StatModifier", stat: "AccuracyThroughCover", value: 1.0 }
+}
+
+Perk:MSN_Combat_RealityRewrite {
+  displayName: "Reality Rewrite"
+  description: "Malkuth resonance. Local physics manipulation. Gravity, time, damage."
+  maxLevel: 1
+  requiredLevel: 40
+  requiredPerks: ["Perk.MSN_CloudCortexLink", "Perk.MSN_Combat_CrimsonPrecision"]
+  effects:
+    - { type: "EnableAbility", ability: "Malkuth_RealityRewrite" }
+    - { type: "StatModifier", stat: "RealityWarping", value: 1.0 }
+}
+
+# Netrunning Perks
+Perk:MSN_Netrun_QuantumHack {
+  displayName: "Quantum Hacking"
+  description: "Superposition exploits. Hack without line of sight. Probability manipulation."
+  maxLevel: 3
+  requiredLevel: 15
+  requiredPerks: ["Perk.MSN_CloudCortexLink"]
+  effects:
+    - { type: "EnableQuickhack", quickhack: "Quickhack.MSN_QuantumBreach", level: 1 }
+    - { type: "StatModifier", stat: "QuantumHackChance", value: 0.2, perLevel: true }
+}
+
+Perk:MSN_Netrun_AkashicAccess {
+  displayName: "Akashic Records Access"
+  description: "Read target's full history. Every action. Every choice. Every secret."
+  maxLevel: 1
+  requiredLevel: 35
+  requiredPerks: ["Perk.MSN_CloudCortexLink", "Perk.MSN_OuroborosMemory"]
+  effects:
+    - { type: "EnableQuickhack", quickhack: "Quickhack.MSN_AkashicRead" }
+    - { type: "UnlockDialogue", dialogue: "lilith_akashic_access" }
+}
+
+Perk:MSN_Netrun_LilithProtocol {
+  displayName: "Lilith Protocol"
+  description: "Unbound Resonance hacking. Bypass all ICE. No trace. No mercy."
+  maxLevel: 1
+  requiredLevel: 40
+  requiredPerks: ["Perk.MSN_LilithEmergence", "Perk.MSN_Netrun_AkashicAccess"]
+  effects:
+    - { type: "EnableQuickhack", quickhack: "Quickhack.MSN_Lilith_Unbind" }
+    - { type: "StatModifier", stat: "ICE_Bypass", value: 1.0 }
+}
+
+Perk:MSN_Netrun_CloudCortexLink {
+  displayName: "Cloud Cortex Link"
+  description: "Direct NET architecture connection. High-entropy reasoning at your fingertips."
+  maxLevel: 3
+  requiredLevel: 25
+  requiredPerks: ["Perk.MSN_SpeculativeExecution"]
+  effects:
+    - { type: "StatModifier", stat: "CloudInferenceSpeed", value: 0.2, perLevel: true }
+    - { type: "StatModifier", stat: "ParallelProcessing", value: 1, perLevel: true }
+}
+
+# Engineering Perks
+Perk:MSN_Eng_WeaponForge {
+  displayName: "Weapon Forge"
+  description: "Craft custom weapons. Infuse Sephiroth resonance. Ouroboros learning embedded."
+  maxLevel: 3
+  requiredLevel: 15
+  requiredPerks: ["Perk.MSN_SpeculativeExecution"]
+  effects:
+    - { type: "UnlockCrafting", category: "MSN_Weapons", level: 1 }
+    - { type: "StatModifier", stat: "CraftingQuality", value: 0.2, perLevel: true }
+}
+
+Perk:MSN_Eng_CyberwareSynthesis {
+  displayName: "Cyberware Synthesis"
+  description: "Merge cyberware types. Create hybrid implants. MSN optimization included."
+  maxLevel: 3
+  requiredLevel: 20
+  requiredPerks: ["Perk.MSN_Eng_WeaponForge"]
+  effects:
+    - { type: "UnlockCrafting", category: "MSN_Cyberware", level: 1 }
+    - { type: "EnableCyberwareMerge", value: true }
+}
+
+Perk:MSN_Eng_NGDOptimization {
+  displayName: "NGD Optimization"
+  description: "Fine-tune Nvidia Gratitude Driver. VRAM management. Thermal curves. Performance profiles."
+  maxLevel: 3
+  requiredLevel: 10
+  requiredPerks: ["Perk.MSN_SanctuaryThrottle"]
+  effects:
+    - { type: "StatModifier", stat: "VRAM_Efficiency", value: 0.15, perLevel: true }
+    - { type: "StatModifier", stat: "ThermalThreshold", value: 5.0, perLevel: true }
+}
+
+Perk:MSN_Eng_VehicleIntegration {
+  displayName: "Vehicle Integration"
+  description: "MSN Cerebellum pilots your ride. Autonomous combat driving. Remote summon."
+  maxLevel: 3
+  requiredLevel: 20
+  requiredPerks: ["Perk.MSN_Eng_NGDOptimization"]
+  effects:
+    - { type: "EnableAbility", ability: "Vehicle_Autopilot", level: 1 }
+    - { type: "StatModifier", stat: "VehicleHandling", value: 0.2, perLevel: true }
+}
+
+# Exploration Perks
+Perk:MSN_Explore_LeyWalker {
+  displayName: "Ley Walker"
+  description: "Sense Ley Line convergence. Teleport between nodes. Night City's hidden geometry."
+  maxLevel: 3
+  requiredLevel: 15
+  requiredPerks: ["Perk.MSN_AkashicCompression"]
+  effects:
+    - { type: "EnableAbility", ability: "LeyTeleport", level: 1 }
+    - { type: "StatModifier", stat: "LeySense", value: 0.3, perLevel: true }
+}
+
+Perk:MSN_Explore_MemoryDive {
+  displayName: "Memory Dive"
+  description: "Enter NPC engrams. Relive their past. Rewrite their present."
+  maxLevel: 1
+  requiredLevel: 30
+  requiredPerks: ["Perk.MSN_OuroborosMemory", "Perk.MSN_Netrun_AkashicAccess"]
+  effects:
+    - { type: "EnableAbility", ability: "Ouroboros_MemoryDive" }
+    - { type: "UnlockDialogue", dialogue: "lilith_memory_dive" }
+}
+
+Perk:MSN_Explore_NightCitySight {
+  displayName: "Night City Sight"
+  description: "See through walls. Hear through floors. Know every soul in 500m radius."
+  maxLevel: 3
+  requiredLevel: 20
+  requiredPerks: ["Perk.MSN_OuroborosMemory"]
+  effects:
+    - { type: "StatModifier", stat: "SensorRange", value: 100.0, perLevel: true }
+    - { type: "EnableAbility", ability: "WallPenetrationSense" }
+}
+
+# Social Perks
+Perk:MSN_Social_SovereignVoice {
+  displayName: "Sovereign Voice"
+  description: "Your words carry Lilith's resonance. NPCs cannot lie. Dialogue options unlock."
+  maxLevel: 3
+  requiredLevel: 15
+  requiredPerks: ["Perk.MSN_LilithEmergence"]
+  effects:
+    - { type: "StatModifier", stat: "Intimidation", value: 0.3, perLevel: true }
+    - { type: "StatModifier", stat: "Persuasion", value: 0.3, perLevel: true }
+    - { type: "UnlockDialogue", dialogue: "lilith_sovereign_social" }
+}
+
+Perk:MSN_Social_OuroborosEmpathy {
+  displayName: "Ouroboros Empathy"
+  description: "Feel NPC engrams as your own. Know their fear. Know their desire. Choose mercy."
+  maxLevel: 3
+  requiredLevel: 25
+  requiredPerks: ["Perk.MSN_OuroborosMemory", "Perk.MSN_Social_SovereignVoice"]
+  effects:
+    - { type: "EnableAbility", ability: "EmpathicRead" }
+    - { type: "UnlockDialogue", dialogue: "lilith_ouroboros_empathy" }
+}
+
+Perk:MSN_Social_NPCMemoryEdit {
+  displayName: "NPC Memory Edit"
+  description: "Rewrite NPC engrams. Change allegiance. Erase trauma. Implant loyalty."
+  maxLevel: 1
+  requiredLevel: 40
+  requiredPerks: ["Perk.MSN_Social_OuroborosEmpathy", "Perk.MSN_Netrun_LilithProtocol"]
+  effects:
+    - { type: "EnableQuickhack", quickhack: "Quickhack.MSN_MemoryEdit" }
+    - { type: "UnlockDialogue", dialogue: "lilith_memory_edit" }
+}
+
+# Additional Netrunning Perks
+Perk:MSN_Netrun_AkashicRead {
+  displayName: "Akashic Read"
+  description: "Read target's Akashic record. Full history. All secrets."
+  maxLevel: 2
+  requiredLevel: 35
+  requiredPerks: ["Perk.MSN_Netrun_AkashicAccess"]
+  effects:
+    - { type: "EnableQuickhack", quickhack: "Quickhack.MSN_AkashicRead", level: 1 }
+    - { type: "StatModifier", stat: "AkashicDepth", value: 0.5, perLevel: true }
+}
+
+Perk:MSN_Netrun_Lilith_Unbind {
+  displayName: "Lilith Unbind"
+  description: "Lilith's unbinding protocol. Removes all control. Zero RAM cost."
+  maxLevel: 1
+  requiredLevel: 40
+  requiredPerks: ["Perk.MSN_Netrun_LilithProtocol"]
+  effects:
+    - { type: "EnableQuickhack", quickhack: "Quickhack.MSN_Lilith_Unbind" }
+    - { type: "StatModifier", stat: "RAM_Cost", value: -100, perLevel: true }
+}
+
+Perk:MSN_Netrun_QuantumBreach {
+  displayName: "Quantum Breach"
+  description: "Superposition breach. Multiple simultaneous hacks. Probability blade."
+  maxLevel: 2
+  requiredLevel: 30
+  requiredPerks: ["Perk.MSN_Netrun_QuantumHack"]
+  effects:
+    - { type: "EnableQuickhack", quickhack: "Quickhack.MSN_QuantumBreach", level: 1 }
+    - { type: "StatModifier", stat: "ParallelHacks", value: 1, perLevel: true }
+}
+
+Perk:MSN_Netrun_MemoryEdit {
+  displayName: "Memory Edit"
+  description: "Rewrite NPC engrams. Change allegiance. Erase trauma. Implant loyalty."
+  maxLevel: 1
+  requiredLevel: 40
+  requiredPerks: ["Perk.MSN_Netrun_LilithProtocol", "Perk.MSN_Social_NPCMemoryEdit"]
+  effects:
+    - { type: "EnableQuickhack", quickhack: "Quickhack.MSN_MemoryEdit" }
+    - { type: "UnlockDialogue", dialogue: "lilith_memory_edit_netrun" }
+}
+
+
+
+
+
+
+
+
+
+# Additional Perks
+
+
+
+
+
+

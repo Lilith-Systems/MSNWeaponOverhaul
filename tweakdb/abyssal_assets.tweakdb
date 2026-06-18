@@ -1,0 +1,867 @@
+// Abyssal Assets - Deep Sea Horror Expansion
+// File: r6/mods/MSNWeaponOverhaul/tweakdb/abyssal_assets.tweakdb
+
+# ============================================================
+# ABYSSAL ASSETS - DEEP SEA HORROR EXPANSION
+# Based on the Abyssal Architecture: 7-tier cryptid ecosystem, Dredge mini-game, Phaser 3 client
+# ============================================================
+
+# ============================================================
+# ABYSSAL WEAPON CATEGORY
+# ============================================================
+
+WeaponCategory:
+  AbyssalWeapons:
+    displayName: "LocKey#abyssal_weapons_name"
+    description: "LocKey#abyssal_weapons_desc"
+    icon: "abyssal_weapons_icon"
+    subCategories: ["Abyssal_Blade", "Abyssal_Gun", "Abyssal_Harpoon", "Abyssal_Artifact", "Abyssal_Bio"]
+    msnIntegration:
+      sephirahAffinity: "Geburah"
+      damageType: "Abyssal"
+      pressureDamage: true
+      corruptionRisk: true
+
+# ============================================================
+# ABYSSAL MANUFACTURER: THE DEEP
+# ============================================================
+
+Brand:The_Deep {
+  displayName: "The Deep"
+  aesthetic: "Abyssal Horror"
+  colorScheme: [0x001122, 0x003344, 0x00FFFF, 0xFF0066, 0xFFFFFF]
+  traits: ["PressureAdaptation", "Bioluminescence", "Corruption", "AncientTech", "EldritchGeometry"]
+  uniqueMod: "The_Deep_Abyssal_Core"
+  msnPerk: "Perk.MSN_Abyssal_Communion"
+}
+
+# ============================================================
+# ABYSSAL BLADES
+# ============================================================
+
+Item:
+  Abyssal_Blade_Trench:
+    displayName: "Trench Walker [Abyssal Blade]"
+    description: "Forged from hadal trench pressure. Cuts through reality like water. The deep remembers."
+    category: "Katana"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 500
+    damageType: "Abyssal"
+    attackSpeed: 1.2
+    msnIntegration:
+      sephirah: "Geburah"
+      pressureDamage: true
+      depthScaling: true
+      corruptionChance: 0.05
+    uniqueMod: "The_Deep_Abyssal_Core"
+    modSlots: ["Abyssal_Blade", "Abyssal_Tsuba", "Abyssal_Tech", "The_Deep_Core"]
+    effects:
+      - type: "PressureWave"
+        radius: 3.0
+        damage: 100
+      - type: "CorruptionSpread"
+        chance: 0.05
+        radius: 5.0
+
+  Abyssal_Blade_Hadal:
+    displayName: "Hadal Edge [Abyssal Blade]"
+    description: "From the deepest point. Cuts through dimensions. The abyss gazes back."
+    category: "Katana"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 750
+    damageType: "Abyssal"
+    attackSpeed: 0.8
+    msnIntegration:
+      sephirah: "Kether"
+      dimensionalCut: true
+      abyssalGaze: true
+      sanityDrain: 0.02
+    uniqueMod: "The_Deep_Abyssal_Core"
+    modSlots: ["Abyssal_Blade", "Abyssal_Tsuba", "Abyssal_Tech", "The_Deep_Core", "Hadal_Core"]
+    effects:
+      - type: "DimensionalRift"
+        chance: 0.03
+        duration: 5.0
+      - type: "AbyssalGaze"
+        target: "all"
+        sanityDamage: 10
+
+# ============================================================
+# ABYSSAL GUNS
+# ============================================================
+
+Item:
+  Abyssal_Harpoon_Gun:
+    displayName: "Leviathan Harpoon [Abyssal Gun]"
+    description: "Fires harpoons that drag souls. Tethers target to the deep. One shot, eternal chain."
+    category: "HarpoonGun"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 400
+    damageType: "Abyssal"
+    fireRate: 0.5
+    magazineSize: 1
+    reloadTime: 3.0
+    msnIntegration:
+      sephirah: "Geburah"
+      soulTether: true
+      chainLength: 50.0
+      pullForce: 50.0
+    uniqueMod: "The_Deep_Abyssal_Core"
+    modSlots: ["Abyssal_Barrel", "Abyssal_Reel", "Abyssal_Tip", "The_Deep_Core"]
+    effects:
+      - type: "SoulTether"
+        duration: 10.0
+        pullSpeed: 10.0
+      - type: "PressureDamage"
+        tickRate: 1.0
+        damagePerTick: 20
+
+  Abyssal_Bioluminescent_Rifle:
+    displayName: "Angler Rifle [Abyssal Gun]"
+    description: "Bioluminescent lure attracts targets. Hypnotic pattern. One shot, consumed."
+    category: "AssaultRifle"
+    brand: "The Deep"
+    rarity: "Epic"
+    damage: 180
+    damageType: "Abyssal"
+    fireRate: 8.0
+    magazineSize: 30
+    reloadTime: 2.5
+    msnIntegration:
+      sephirah: "Netzach"
+      hypnoticLure: true
+      lureRadius: 20.0
+      lureDuration: 5.0
+    uniqueMod: "The_Deep_Abyssal_Core"
+    modSlots: ["Abyssal_Barrel", "Abyssal_Lure", "Abyssal_Mag", "The_Deep_Core"]
+    effects:
+      - type: "HypnoticLure"
+        radius: 20.0
+        duration: 5.0
+        chance: 0.3
+      - type: "BioluminescentTrail"
+        duration: 3.0
+
+  Abyssal_Pressure_Cannon:
+    displayName: "Pressure Cannon [Abyssal Gun]"
+    description: "Compresses water to diamond hardness. Fires pressure waves. Crushes armor like paper."
+    category: "HeavyWeapon"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 600
+    damageType: "Abyssal"
+    fireRate: 0.3
+    magazineSize: 3
+    reloadTime: 5.0
+    msnIntegration:
+      sephirah: "Binah"
+      pressureWave: true
+      armorCrush: true
+      shockwaveRadius: 10.0
+    modSlots: ["Abyssal_Barrel", "Abyssal_Compressor", "Abyssal_Core"]
+    effects:
+      - type: "PressureWave"
+        radius: 10.0
+        armorPiercing: 1.0
+      - type: "ArmorCrush"
+        value: 0.8
+
+# ============================================================
+# ABYSSAL HARPOONS
+# ============================================================
+
+Item:
+  Abyssal_Harpoon_Soul:
+    displayName: "Soul Harpoon [Abyssal Harpoon]"
+    description: "Harpoons the soul, not the body. Pulls the essence from the shell."
+    category: "Harpoon"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 300
+    damageType: "Abyssal"
+    attackSpeed: 0.6
+    msnIntegration:
+      sephirah: "Yesod"
+      soulHarpoon: true
+      essenceDrain: true
+      chainLength: 30.0
+    modSlots: ["Abyssal_Tip", "Abyssal_Chain", "Abyssal_Reel", "The_Deep_Core"]
+    effects:
+      - type: "EssenceDrain"
+        amount: 50.0
+      - type: "SoulChain"
+        length: 30.0
+        breakChance: 0.01
+
+  Abyssal_Harpoon_Leviathan:
+    displayName: "Leviathan Harpoon [Abyssal Harpoon]"
+    description: "For the truly massive. Anchors gods to the seabed. Mythic scale."
+    category: "Harpoon"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 1000
+    damageType: "Abyssal"
+    attackSpeed: 0.2
+    msnIntegration:
+      sephirah: "Kether"
+      leviathanScale: true
+      godAnchor: true
+      chainLength: 100.0
+    modSlots: ["Abyssal_Tip", "Abyssal_Chain", "Abyssal_Reel", "The_Deep_Core", "Leviathan_Core"]
+    effects:
+      - type: "GodAnchor"
+        duration: 30.0
+      - type: "SeabedLock"
+        absolute: true
+
+# ============================================================
+# ABYSSAL ARTIFACTS
+# ============================================================
+
+Item:
+  Abyssal_Artifact_Trident:
+    displayName: "Abyssal Trident [Artifact]"
+    description: "Three prongs. Past, Present, Future. Controls the tides of fate."
+    category: "Artifact"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 0
+    msnIntegration:
+      sephirah: "Tiphareth"
+      fateControl: true
+      tideCommand: true
+      threeFates: true
+    modSlots: ["Artifact_Core", "Fate_Prong", "Tide_Prong", "Destiny_Prong"]
+    effects:
+      - type: "FateManipulation"
+        radius: 50.0
+        duration: 10.0
+      - type: "TideCommand"
+        tsunami: true
+        radius: 100.0
+
+  Abyssal_Artifact_Compass:
+    displayName: "Abyssal Compass [Artifact]"
+    description: "Points to what you fear most. Also points to what you need. The deep knows."
+    category: "Artifact"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 0
+    msnIntegration:
+      sephirah: "Chokhmah"
+      fearCompass: true
+      needCompass: true
+      deepKnowledge: true
+    modSlots: ["Artifact_Core", "Fear_Needle", "Need_Needle", "Deep_Core"]
+    effects:
+      - type: "FearReveal"
+        radius: 100.0
+      - type: "NeedReveal"
+        radius: 100.0
+      - type: "DeepWhisper"
+        interval: 60.0
+
+  Abyssal_Artifact_Pearl:
+    displayName: "Pearl of the Deep [Artifact]"
+    description: "Contains a universe. Crush for one wish. The abyss always collects."
+    category: "Artifact"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 0
+    msnIntegration:
+      sephirah: "Malkuth"
+      universeContainer: true
+      oneWish: true
+      abyssCollects: true
+    modSlots: ["Artifact_Core", "Universe_Core", "Wish_Trigger", "Collection_Seal"]
+    effects:
+      - type: "WishGrant"
+        cost: "abyss_collects"
+      - type: "UniverseStorage"
+        capacity: "infinite"
+
+# ============================================================
+# ABYSSAL BIO-WEAPONS
+# ============================================================
+
+Item:
+  Abyssal_Bio_Symbiote:
+    displayName: "Abyssal Symbiote [Bio-Weapon]"
+    description: "Living armor. Bonds with host. Feeds on corruption. Grants deep adaptation."
+    category: "Cyberware"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 0
+    msnIntegration:
+      sephirah: "Chesed"
+      symbiotic: true
+      corruptionFeeding: true
+      deepAdaptation: true
+    modSlots: ["Bio_Core", "Bio_Nutrient", "Bio_Neural_Link", "Abyssal_Core"]
+    effects:
+      - type: "DeepAdaptation"
+        pressureImmunity: true
+        darknessVision: true
+        pressureDamage: 0.5
+      - type: "CorruptionFeeding"
+        healOnCorruption: true
+        corruptionGain: 0.1
+
+  Abyssal_Bio_Parasite:
+    displayName: "Abyssal Parasite [Bio-Weapon]"
+    description: "Inject into target. Controls from within. The deep spreads."
+    category: "BioWeapon"
+    brand: "The Deep"
+    rarity: "Legendary"
+    damage: 50
+    damageType: "Abyssal"
+    msnIntegration:
+      sephirah: "Yesod"
+      parasiticControl: true
+      internalSpread: true
+      hiveMind: true
+    modSlots: ["Bio_Core", "Bio_Injector", "Abyssal_Core"]
+    effects:
+      - type: "ParasiticControl"
+        controlChance: 0.5
+        duration: 30.0
+      - type: "InternalSpread"
+        spreadRate: 0.1
+      - type: "HiveMind"
+        sharedVision: true
+
+# ============================================================
+# ABYSSAL CYBERWARE
+# ============================================================
+
+Item:
+  Abyssal_Cyberdeck_Deep:
+    displayName: "Abyssal Deep [Cyberdeck]"
+    description: "The deep sees all. Hacks through water, air, reality. Pressure hacks."
+    category: "Cyberdeck"
+    brand: "The Deep"
+    rarity: "Legendary"
+    stats:
+      - { type: "RAM", value: 30 }
+      - { type: "Buffer", value: 12 }
+      - { type: "CooldownReduction", value: 0.5 }
+      - { type: "QuickhackDamage", value: 1.0 }
+      - { type: "PressureHacking", value: true }
+    msnIntegration:
+      sephirah: "Binah"
+      pressureHacking: true
+      waterHacking: true
+      abyssalProtocol: true
+    mods: ["Abyssal_Pressure_Mod", "Abyssal_Water_Mod", "Abyssal_Protocol_Mod"]
+
+Item:
+  Abyssal_Optics_Deep:
+    displayName: "Abyssal Eyes [Optics]"
+    description: "See in absolute darkness. See through pressure. See the deep's truth."
+    category: "Optics"
+    brand: "The Deep"
+    rarity: "Legendary"
+    stats:
+      - { type: "DarknessVision", value: true }
+      - { type: "PressureVision", value: true }
+      - { type: "CorruptionSight", value: true }
+      - { type: "AbyssalGaze", value: true }
+    msnIntegration:
+      sephirah: "Chokhmah"
+      darknessVision: true
+      pressureSight: true
+      corruptionSight: true
+      abyssalGaze: true
+    mods: ["Abyssal_Lens", "Abyssal_Retina", "Abyssal_Processor"]
+
+Item:
+  Abyssal_Nervous_System:
+    displayName: "Abyssal Nervous System [Nervous System]"
+    description: "Nerves of the deep. Pressure immunity. Bioluminescent signaling. Hive connection."
+    category: "NervousSystem"
+    brand: "The Deep"
+    rarity: "Legendary"
+    stats:
+      - { type: "PressureImmunity", value: true }
+      - { type: "BioluminescentSignaling", value: true }
+      - { type: "HiveConnection", value: true }
+      - { type: "AbyssalReflexes", value: 2.0 }
+    msnIntegration:
+      sephirah: "Geburah"
+      pressureImmunity: true
+      bioluminescent: true
+      hiveMind: true
+      abyssalReflexes: 2.0
+    mods: ["Abyssal_Nerves", "Abyssal_Synapses", "Abyssal_Hive_Link"]
+
+# ============================================================
+# THE DEEP UNIQUE MODS
+# ============================================================
+
+Item:
+  The_Deep_Abyssal_Core:
+    displayName: "The Deep: Abyssal Core"
+    description: "Core of the abyss. Grants pressure adaptation, bioluminescence, corruption."
+    type: "WeaponMod"
+    slot: "Abyssal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "PressureAdaptation", value: true }
+      - { type: "Bioluminescence", value: true }
+      - { type: "Corruption", value: 0.1 }
+      - { type: "EldritchGeometry", value: true }
+
+Item:
+  The_Deep_Core:
+    displayName: "The Deep: Core Module"
+    description: "Core module for abyssal cybernetics. Grants deep adaptation."
+    type: "CyberwareMod"
+    slot: "Abyssal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "PressureAdaptation", value: true }
+      - { type: "Bioluminescence", value: true }
+      - { type: "CorruptionResistance", value: 0.5 }
+
+Item:
+  Hadal_Core:
+    displayName: "Hadal Core"
+    description: "Core from the deepest trench. Dimensional cutting. Abyssal gaze."
+    type: "WeaponMod"
+    slot: "Hadal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "DimensionalCut", value: true }
+      - { type: "AbyssalGaze", value: true }
+      - { type: "SanityDrain", value: 0.02 }
+
+Item:
+  Leviathan_Core:
+    displayName: "Leviathan Core"
+    description: "Core of the leviathan. God-anchoring. Mythic scale."
+    type: "WeaponMod"
+    slot: "Leviathan_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "LeviathanScale", value: true }
+      - { type: "GodAnchor", value: true }
+      - { type: "MythicScale", value: true }
+
+Item:
+  The_Deep_Abyssal_Core:
+    displayName: "The Deep: Abyssal Core"
+    description: "Core of the abyss. Grants pressure adaptation, bioluminescence, corruption."
+    type: "WeaponMod"
+    slot: "Abyssal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "PressureAdaptation", value: true }
+      - { type: "Bioluminescence", value: true }
+      - { type: "Corruption", value: 0.1 }
+      - { type: "EldritchGeometry", value: true }
+
+Item:
+  The_Deep_Core:
+    displayName: "The Deep: Core Module"
+    description: "Core module for abyssal cybernetics. Grants deep adaptation."
+    type: "CyberwareMod"
+    slot: "Abyssal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "PressureAdaptation", value: true }
+      - { type: "Bioluminescence", value: true }
+      - { type: "CorruptionResistance", value: 0.5 }
+
+Item:
+  Hadal_Core:
+    displayName: "Hadal Core"
+    description: "Core from the deepest trench. Dimensional cutting. Abyssal gaze."
+    type: "WeaponMod"
+    slot: "Hadal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "DimensionalCut", value: true }
+      - { type: "AbyssalGaze", value: true }
+      - { type: "SanityDrain", value: 0.02 }
+
+Item:
+  Leviathan_Core:
+    displayName: "Leviathan Core"
+    description: "Core of the leviathan. God-anchoring. Mythic scale."
+    type: "WeaponMod"
+    slot: "Leviathan_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "LeviathanScale", value: true }
+      - { type: "GodAnchor", value: true }
+      - { type: "MythicScale", value: true }
+
+Item:
+  The_Deep_Abyssal_Core:
+    displayName: "The Deep: Abyssal Core"
+    description: "Core of the abyss. Grants pressure adaptation, bioluminescence, corruption."
+    type: "WeaponMod"
+    slot: "Abyssal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "PressureAdaptation", value: true }
+      - { type: "Bioluminescence", value: true }
+      - { type: "Corruption", value: 0.1 }
+      - { type: "EldritchGeometry", value: true }
+
+Item:
+  The_Deep_Core:
+    displayName: "The Deep: Core Module"
+    description: "Core module for abyssal cybernetics. Grants deep adaptation."
+    type: "CyberwareMod"
+    slot: "Abyssal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "PressureAdaptation", value: true }
+      - { type: "Bioluminescence", value: true }
+      - { type: "CorruptionResistance", value: 0.5 }
+
+Item:
+  Hadal_Core:
+    displayName: "Hadal Core"
+    description: "Core from the deepest trench. Dimensional cutting. Abyssal gaze."
+    type: "WeaponMod"
+    slot: "Hadal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "DimensionalCut", value: true }
+      - { type: "AbyssalGaze", value: true }
+      - { type: "SanityDrain", value: 0.02 }
+
+Item:
+  Leviathan_Core:
+    displayName: "Leviathan Core"
+    description: "Core of the leviathan. God-anchoring. Mythic scale."
+    type: "WeaponMod"
+    slot: "Leviathan_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "LeviathanScale", value: true }
+      - { type: "GodAnchor", value: true }
+      - { type: "MythicScale", value: true }
+
+Item:
+  The_Deep_Abyssal_Core:
+    displayName: "The Deep: Abyssal Core"
+    description: "Core of the abyss. Grants pressure adaptation, bioluminescence, corruption."
+    type: "WeaponMod"
+    slot: "Abyssal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "PressureAdaptation", value: true }
+      - { type: "Bioluminescence", value: true }
+      - { type: "Corruption", value: 0.1 }
+      - { type: "EldritchGeometry", value: true }
+
+Item:
+  The_Deep_Core:
+    displayName: "The Deep: Core Module"
+    description: "Core module for abyssal cybernetics. Grants deep adaptation."
+    type: "CyberwareMod"
+    slot: "Abyssal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "PressureAdaptation", value: true }
+      - { type: "Bioluminescence", value: true }
+      - { type: "CorruptionResistance", value: 0.5 }
+
+Item:
+  Hadal_Core:
+    displayName: "Hadal Core"
+    description: "Core from the deepest trench. Dimensional cutting. Abyssal gaze."
+    type: "WeaponMod"
+    slot: "Hadal_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "DimensionalCut", value: true }
+      - { type: "AbyssalGaze", value: true }
+      - { type: "SanityDrain", value: 0.02 }
+
+Item:
+  Leviathan_Core:
+    displayName: "Leviathan Core"
+    description: "Core of the leviathan. God-anchoring. Mythic scale."
+    type: "WeaponMod"
+    slot: "Leviathan_Core"
+    rarity: "Legendary"
+    stats:
+      - { type: "LeviathanScale", value: true }
+      - { type: "GodAnchor", value: true }
+      - { type: "MythicScale", value: true }
+
+# ============================================================
+# ABYSSAL STATUS EFFECTS
+# ============================================================
+
+StatusEffect:Abyssal_Pressure {
+  displayName: "Abyssal Pressure"
+  description: "Crushing pressure from the deep. Slows. Crushes armor."
+  type: "Debuff"
+  duration: 10.0
+  effects:
+    - { type: "SpeedReduction", value: 0.5 }
+    - { type: "ArmorReduction", value: 0.3 }
+    - { type: "DamageOverTime", damage: 20, interval: 1.0 }
+
+StatusEffect:Abyssal_Corruption {
+  displayName: "Abyssal Corruption"
+  description: "The deep claims you. Mutations. Whispers. Slow transformation."
+  type: "Debuff"
+  duration: 300.0
+  effects:
+    - { type: "MutationChance", value: 0.01, interval: 10.0 }
+    - { type: "WhisperAudio", interval: 30.0 }
+    - { type: "StatMutation", stats: ["Corruption"], value: 0.01, interval: 60.0 }
+
+StatusEffect:Abyssal_Gaze {
+  displayName: "Abyssal Gaze"
+  description: "The abyss stares back. Sanity drain. Fear. Paralysis."
+  type: "Debuff"
+  duration: 5.0
+  effects:
+    - { type: "SanityDrain", value: 10.0 }
+    - { type: "Fear", duration: 5.0 }
+    - { type: "ParalysisChance", value: 0.2 }
+
+StatusEffect:Abyssal_Pressure_Wave {
+  displayName: "Pressure Wave"
+  description: "Shockwave of compressed water. Knocks down. Crushes internal organs."
+  type: "Debuff"
+  duration: 3.0
+  effects:
+    - { type: "Knockdown", value: true }
+    - { type: "InternalDamage", damage: 50.0 }
+    - { type: "ArmorCrush", value: 0.5 }
+
+StatusEffect:Soul_Tether {
+  displayName: "Soul Tether"
+  description: "Soul chained to the deep. Dragged to the abyss. Essence drain."
+  type: "Debuff"
+  duration: 10.0
+  effects:
+    - { type: "MovementLock", target: "anchor" }
+    - { type: "EssenceDrain", value: 10.0, interval: 1.0 }
+    - { type: "AbyssalPull", force: 20.0 }
+
+StatusEffect:Abyssal_Hypnotic_Lure {
+  displayName: "Hypnotic Lure"
+  description: "Bioluminescent hypnosis. Walks toward the light. Into the mouth."
+  type: "Debuff"
+  duration: 5.0
+  effects:
+    - { type: "ForcedMovement", target: "source" }
+    - { type: "Hypnosis", value: true }
+    - { type: "DefenseReduction", value: 0.5 }
+
+StatusEffect:Abyssal_Dimensional_Rift {
+  displayName: "Dimensional Rift"
+  description: "Reality tears. Phasing. Time distortion. The deep bleeds through."
+  type: "Debuff"
+  duration: 10.0
+  effects:
+    - { type: "Phasing", value: true }
+    - { type: "TimeDilation", multiplier: 0.5 }
+    - { type: "RealityDamage", damage: 30.0, interval: 2.0 }
+
+StatusEffect:Abyssal_Parasitic_Control {
+  displayName: "Parasitic Control"
+  description: "Parasite in the nervous system. Body not yours. The deep pilots."
+  type: "Debuff"
+  duration: 30.0
+  effects:
+    - { type: "ControlLoss", chance: 0.3 }
+    - { type: "ForcedAction", chance: 0.2 }
+    - { type: "HiveMind", sharedVision: true }
+
+StatusEffect:Abyssal_Corruption_Feeding {
+  displayName: "Corruption Feeding"
+  description: "Feeds on corruption. Heals from the deep's touch."
+  type: "Buff"
+  duration: -1.0
+  effects:
+    - { type: "HealOnCorruption", value: 20.0 }
+    - { type: "CorruptionGain", value: 0.1 }
+
+StatusEffect:Abyssal_Deep_Adaptation {
+  displayName: "Deep Adaptation"
+  description: "Body of the deep. Pressure immunity. Darkness vision. Corruption feeding."
+  type: "Buff"
+  duration: -1.0
+  effects:
+    - { type: "PressureImmunity", value: true }
+    - { type: "DarknessVision", value: true }
+    - { type: "HealOnCorruption", value: 10.0 }
+    - { type: "CorruptionFeeding", value: 0.1 }
+
+StatusEffect:Abyssal_Fate_Control {
+  displayName: "Fate Control"
+  description: "The trident commands destiny. Three fates obey."
+  type: "Buff"
+  duration: 10.0
+  effects:
+    - { type: "FateManipulation", radius: 50.0 }
+    - { type: "CriticalGuarantee", chance: 1.0 }
+    - { type: "EnemyFumble", chance: 0.5 }
+
+StatusEffect:Abyssal_Tide_Command {
+  displayName: "Tide Command"
+  description: "The trident commands the sea. Tsunami on demand."
+  type: "Buff"
+  duration: 10.0
+  effects:
+    - { type: "TsunamiSummon", radius: 100.0, damage: 500.0 }
+    - { type: "WaterControl", radius: 200.0 }
+
+StatusEffect:Abyssal_Fear_Compass {
+  displayName: "Fear Compass"
+  description: "Know what they fear. Know what they need. The deep knows all."
+  type: "Buff"
+  duration: 30.0
+  effects:
+    - { type: "FearSense", radius: 100.0 }
+    - { type: "NeedSense", radius: 100.0 }
+    - { type: "DeepWhisper", interval: 60.0 }
+
+StatusEffect:Abyssal_Universe_Storage {
+  displayName: "Universe Storage"
+  description: "Infinite storage within the pearl. A universe in your pocket."
+  type: "Buff"
+  duration: -1.0
+  effects:
+    - { type: "InfiniteStorage", value: true }
+    - { type: "WeightReduction", value: 1.0 }
+
+StatusEffect:Abyssal_Wish_Grant {
+  displayName: "Wish Grant"
+  description: "One wish. The abyss collects. Choose wisely."
+  type: "Buff"
+  duration: 1.0
+  effects:
+    - { type: "WishGrant", value: true }
+    - { type: "AbyssCollects", value: true }
+
+StatusEffect:Abyssal_Symbiotic {
+  displayName: "Symbiotic Bond"
+  description: "Living armor. Feeds on corruption. Grants deep adaptation."
+  type: "Buff"
+  duration: -1.0
+  effects:
+    - { type: "PressureImmunity", value: true }
+    - { type: "DarknessVision", value: true }
+    - { type: "CorruptionFeeding", value: 0.1 }
+    - { type: "HealOnCorruption", value: 20.0 }
+
+StatusEffect:Abyssal_Parasitic_Control {
+  displayName: "Parasitic Control"
+  description: "Parasite controls host. Internal spread. Hive mind."
+  type: "Debuff"
+  duration: 30.0
+  effects:
+    - { type: "ControlLoss", chance: 0.3 }
+    - { type: "ForcedAction", chance: 0.2 }
+    - { type: "HiveMind", sharedVision: true }
+
+StatusEffect:Abyssal_Pressure_Hacking {
+  displayName: "Pressure Hacking"
+  description: "Hack through water. Hack through pressure. The deep connects all."
+  type: "Buff"
+  duration: 30.0
+  effects:
+    - { type: "WaterHacking", value: true }
+    - { type: "PressureHacking", value: true }
+    - { type: "AbyssalProtocol", value: true }
+
+StatusEffect:Abyssal_Darkness_Vision {
+  displayName: "Absolute Darkness Vision"
+  description: "See in absolute darkness. See through pressure. See the deep's truth."
+  type: "Buff"
+  duration: -1.0
+  effects:
+    - { type: "AbsoluteDarknessVision", value: true }
+    - { type: "PressureVision", value: true }
+    - { type: "CorruptionSight", value: true }
+
+StatusEffect:Abyssal_Bioluminescent_Signaling {
+  displayName: "Bioluminescent Signaling"
+  description: "Communicate with light. Hive mind. The deep speaks in color."
+  type: "Buff"
+  duration: -1.0
+  effects:
+    - { type: "BioluminescentSignaling", value: true }
+    - { type: "HiveMind", sharedVision: true }
+    - { type: "ColorLanguage", value: true }
+
+StatusEffect:Abyssal_Hive_Connection {
+  displayName: "Hive Connection"
+  description: "Connected to the deep's hive. Shared vision. Shared purpose."
+  type: "Buff"
+  duration: -1.0
+  effects:
+    - { type: "HiveMind", sharedVision: true }
+    - { type: "SharedMemory", value: true }
+    - { type: "TelepathicLink", range: "infinite" }
+
+StatusEffect:Abyssal_Abyssal_Reflexes {
+  displayName: "Abyssal Reflexes"
+  description: "Reflexes of the deep. Pressure-speed. Impossible dodge."
+  type: "Buff"
+  duration: -1.0
+  effects:
+    - { type: "ReflexMultiplier", value: 2.0 }
+    - { type: "PressureSpeed", value: true }
+    - { type: "ImpossibleDodge", chance: 0.1 }
+
+StatusEffect:Abyssal_Fate_Control {
+  displayName: "Fate Control"
+  description: "The trident commands destiny. Three fates obey."
+  type: "Buff"
+  duration: 10.0
+  effects:
+    - { type: "FateManipulation", radius: 50.0 }
+    - { type: "CriticalGuarantee", chance: 1.0 }
+    - { type: "EnemyFumble", chance: 0.5 }
+
+StatusEffect:Abyssal_Tide_Command {
+  displayName: "Tide Command"
+  description: "The trident commands the sea. Tsunami on demand."
+  type: "Buff"
+  duration: 10.0
+  effects:
+    - { type: "TsunamiSummon", radius: 100.0, damage: 500.0 }
+    - { type: "WaterControl", radius: 200.0 }
+
+StatusEffect:Abyssal_Fear_Compass {
+  displayName: "Fear Compass"
+  description: "Know what they fear. Know what they need. The deep knows all."
+  type: "Buff"
+  duration: 30.0
+  effects:
+    - { type: "FearSense", radius: 100.0 }
+    - { type: "NeedSense", radius: 100.0 }
+    - { type: "DeepWhisper", interval: 60.0 }
+
+StatusEffect:Abyssal_Universe_Storage {
+  displayName: "Universe Storage"
+  description: "Infinite storage within the pearl. A universe in your pocket."
+  type: "Buff"
+  duration: -1.0
+  effects:
+    - { type: "InfiniteStorage", value: true }
+    - { type: "WeightReduction", value: 1.0 }
+
+StatusEffect:Abyssal_Wish_Grant {
+  displayName: "Wish Grant"
+  description: "One wish. The abyss collects. Choose wisely."
+  type: "Buff"
+  duration: 1.0
+  effects:
+    - { type: "WishGrant", value: true }
+    - { type: "AbyssCollects", value: true }

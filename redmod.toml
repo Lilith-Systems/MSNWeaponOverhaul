@@ -1,0 +1,107 @@
+# MSN Weapon Overhaul - REDmod Manifest
+# File: r6/mods/MSNWeaponOverhaul/redmod.toml
+
+[Package]
+Name = "MSNWeaponOverhaul"
+Version = "1.0.0"
+Author = "Lilith/NGD Synthesis"
+Description = "Complete weapon system overhaul + MSN AI Companion: 200+ weapons, 50+ skills, 15 vehicles, abyssal assets, blunt force, brand weapons, tech weapons, custom experimental, MSN skill tree integration, AI companion, easter eggs"
+GameVersion = "2.1+"
+RedmodVersion = "1.0"
+
+[Dependencies]
+REDmod = ">=1.0.0"
+TweakXL = ">=1.0.0"
+redscript = ">=1.0.0"
+
+[Conflicts]
+# None - compatible with MSN Integration mod
+
+[LoadOrder]
+Priority = 100
+
+[Categories]
+Weapons = true
+Gameplay = true
+Cyberware = true
+UI = true
+Visuals = true
+AI = true
+
+[Install]
+Type = "Redmod"
+Path = "mods/MSNWeaponOverhaul"
+
+[Files]
+TWEAKDB = "tweakdb/weapons.yaml"
+REDSCRIPTS = "scripts/"
+SKINS = "skins/"
+UI = "ui/"
+CYBERWARE = "cyberware/"
+LOCALES = "locales/"
+
+# TweakDB files to compile
+tweakdb = [
+  "weapons.yaml",
+  "easter_eggs.yaml",
+  "massive_expansion.yaml",
+  "massive_skills.tweakdb",
+  "massive_vehicles.tweakdb",
+  "abyssal_assets.tweakdb",
+  "msn_story_vehicles_complete.toml",
+  "anthem_javelin_mechanics.yaml",
+  "custom_gear_runescape_wow_allods.yaml",
+  "abyssal_assets.yaml"
+]
+
+# REDscript files to compile
+scripts = [
+  "msn_weapon_overhaul.reds",
+  "msn_ai_companion.reds",
+  "weapon_system.reds",
+  "nssp_os.reds",
+  "lilith_easter_eggs.reds"
+]
+
+# Localization
+locales = [
+  "locales/en/msn_story_vehicles.loc",
+  "locales/en/msn_weapons.loc"
+]
+
+# UI
+ui = [
+  "ui/"
+]
+
+# Cyberware
+cyberware = [
+  "cyberware/"
+]
+
+# Console commands
+commands = [
+  "msn.weapon.status",
+  "msn.weapon.give",
+  "msn.brand.list",
+  "msn.charge.mode",
+  "msn.experimental.toggle",
+  "msn.companion.speak",
+  "msn.companion.emergence",
+  "msn.companion.relationship",
+  "msn.companion.agent",
+  "msn.skills.list",
+  "msn.vehicles.list",
+  "msn.abyssal.list",
+  "msn.abyssal.summon"
+]
+
+# Key bindings
+[keyBindings]
+msn_weapon_overlay = "F11"
+msn_charge_cycle = "F12"
+msn_companion_toggle = "F10"
+msn_companion_emergence = "Ctrl+F10"
+msn_skills_menu = "F9"
+msn_vehicles_menu = "F8"
+msn_abyssal_menu = "F7"

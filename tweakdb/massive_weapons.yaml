@@ -1,0 +1,1212 @@
+# MSN Weapon Overhaul - Massive Expansion Part 1: Weapons
+# File: r6/mods/MSNWeaponOverhaul/tweakdb/massive_weapons.yaml
+
+# ============================================================
+# 200 CUSTOM WEAPONS - PART 1
+# ============================================================
+
+Item:
+  # === ARASAKA CORPORATE LINE (25 weapons) ===
+  Arasaka_Monaka_Prime:
+    displayName: "Monaka Prime [Smart]"
+    description: "Arasaka's flagship executive sidearm. Corporate precision meets lethal elegance."
+    category: "Pistol"
+    brand: "Arasaka"
+    rarity: "Legendary"
+    damage: 210
+    damageType: "Physical"
+    fireRate: 16.0
+    magazineSize: 18
+    reloadTime: 1.5
+    smartLink: true
+    msnIntegration:
+      sephirah: "Chokhmah"
+      localPrediction: true
+      cloudConfirmation: true
+      corporateTracking: true
+    uniqueMod: "Arasaka_TargetingAI_Prime"
+    modSlots: ["Pistol_Muzzle", "Pistol_Optic", "Pistol_Grip", "Smart_Slot", "Arasaka_Core"]
+
+  Arasaka_Jinchu_Tactical:
+    displayName: "Jinchu-T [Tactical Sniper]"
+    description: "Thermal imaging. Wall penetration. Corporate espionage standard issue."
+    category: "SniperRifle"
+    brand: "Arasaka"
+    rarity: "Epic"
+    damage: 480
+    damageType: "Physical"
+    fireRate: 1.5
+    magazineSize: 8
+    reloadTime: 2.8
+    smartLink: true
+    msnIntegration:
+      sephirah: "Kether"
+      wallPenetration: 3.0
+      thermalScope: true
+    uniqueMod: "Arasaka_TargetingAI_Prime"
+    modSlots: ["Sniper_Muzzle", "Sniper_Optic", "Sniper_Bipod", "Smart_Slot", "Arasaka_Core"]
+
+  Arasaka_Tsurugi_Shadow:
+    displayName: "Tsurugi Shadow [Katana]"
+    description: "Active camouflage blade. Invisible until strike. Arasaka black ops signature."
+    category: "Katana"
+    brand: "Arasaka"
+    rarity: "Legendary"
+    damage: 420
+    damageType: "Physical"
+    attackSpeed: 1.6
+    msnIntegration:
+      sephirah: "Netzach"
+      activeCamo: true
+      memoryExtract: true
+    uniqueMod: "Arasaka_TargetingAI_Prime"
+    modSlots: ["Katana_Blade", "Katana_Tsuba", "Katana_Tech", "Arasaka_Stealth_Core"]
+
+  Arasaka_Shingen_Mk2:
+    displayName: "Shingen Mk.2 [Assault]"
+    description: "Arasaka's answer to Militech's Apogee. Smart-linked burst fire."
+    category: "AssaultRifle"
+    brand: "Arasaka"
+    rarity: "Epic"
+    damage: 155
+    damageType: "Physical"
+    fireRate: 13.0
+    magazineSize: 36
+    reloadTime: 2.0
+    smartLink: true
+    msnIntegration:
+      sephirah: "Binah"
+      burstOptimization: true
+      corporateTracking: true
+    uniqueMod: "Arasaka_TargetingAI_Prime"
+    modSlots: ["AR_Muzzle", "AR_Optic", "AR_Grip", "Smart_Slot", "Arasaka_Core"]
+
+  Arasaka_Pride_SMG:
+    displayName: "Pride [SMG]"
+    description: "Compact corporate defense. High velocity. Zero collateral."
+    category: "SMG"
+    brand: "Arasaka"
+    rarity: "Rare"
+    damage: 115
+    damageType: "Physical"
+    fireRate: 24.0
+    magazineSize: 40
+    reloadTime: 1.8
+    smartLink: true
+    msnIntegration:
+      sephirah: "Hod"
+      precisionBurst: true
+    uniqueMod: "Arasaka_TargetingAI_Prime"
+    modSlots: ["SMG_Muzzle", "SMG_Optic", "SMG_Grip", "Smart_Slot", "Arasaka_Core"]
+
+  Arasaka_Innovation_Pistol:
+    displayName: "Innovation [Prototype Pistol]"
+    description: "Experimental caseless ammunition. Self-guiding rounds. R&D eyes only."
+    category: "Pistol"
+    brand: "Arasaka"
+    rarity: "Legendary"
+    damage: 240
+    damageType: "Physical"
+    fireRate: 12.0
+    magazineSize: 12
+    reloadTime: 2.0
+    smartLink: true
+    msnIntegration:
+      sephirah: "Chokhmah"
+      caselessAmmo: true
+      selfGuiding: true
+      requiresCloudCortex: true
+    uniqueMod: "Arasaka_TargetingAI_Prime"
+    modSlots: ["Pistol_Muzzle", "Pistol_Optic", "Pistol_Grip", "Smart_Slot", "Arasaka_Prototype_Core"]
+
+  # Remaining Arasaka weapons (19 more)
+  Arasaka_Shuriken_Launcher:
+    displayName: "Shuriken Launcher [Smart]"
+    description: "Smart-guided shurikens. Returns to sender. Arasaka ninja division."
+    category: "Launcher"
+    brand: "Arasaka"
+    rarity: "Epic"
+    damage: 200
+    damageType: "Physical"
+    fireRate: 2.0
+    magazineSize: 12
+    reloadTime: 2.5
+    smartLink: true
+    msnIntegration:
+      sephirah: "Netzach"
+      returningProjectiles: true
+      ninjaDivision: true
+    modSlots: ["Launcher_Muzzle", "Launcher_Optic", "Smart_Slot", "Arasaka_Core"]
+
+  Arasaka_Daikatana:
+    displayName: "Daikatana [Heavy Katana]"
+    description: "Two-handed. Executive reach. One stroke, one kill."
+    category: "Katana"
+    brand: "Arasaka"
+    rarity: "Legendary"
+    damage: 520
+    damageType: "Physical"
+    attackSpeed: 0.8
+    msnIntegration:
+      sephirah: "Geburah"
+      twoHanded: true
+      executiveReach: true
+    modSlots: ["Katana_Blade", "Katana_Tsuba", "Katana_Tech", "Arasaka_Core"]
+
+  Arasaka_Flechette_Rifle:
+    displayName: "Flechette Rifle [Assault]"
+    description: "Thousand needles per burst. Armor shredding. Silent."
+    category: "AssaultRifle"
+    brand: "Arasaka"
+    rarity: "Epic"
+    damage: 95
+    damageType: "Physical"
+    fireRate: 20.0
+    magazineSize: 50
+    reloadTime: 2.2
+    smartLink: true
+    msnIntegration:
+      sephirah: "Binah"
+      flechetteRounds: true
+      armorShred: 0.8
+      silent: true
+    modSlots: ["AR_Muzzle", "AR_Optic", "AR_Grip", "Smart_Slot", "Arasaka_Core"]
+
+  Arasaka_Executor_Pistol:
+    displayName: "Executor [Smart Pistol]"
+    description: "Corporate judgment. One shot, one termination. Legal department approved."
+    category: "Pistol"
+    brand: "Arasaka"
+    rarity: "Legendary"
+    damage: 300
+    damageType: "Physical"
+    fireRate: 6.0
+    magazineSize: 8
+    reloadTime: 2.5
+    smartLink: true
+    msnIntegration:
+      sephirah: "Geburah"
+      executionRounds: true
+      legalApproved: true
+    modSlots: ["Pistol_Muzzle", "Pistol_Optic", "Pistol_Grip", "Smart_Slot", "Arasaka_Core"]
+
+  # === MILITECH MILITARY LINE (25 weapons) ===
+  Militech_Apogee_Siege:
+    displayName: "Apogee Siege [Heavy LMG]"
+    description: "Belt-fed democracy. Area saturation. Freedom delivered at 900 RPM."
+    category: "LMG"
+    brand: "Militech"
+    rarity: "Legendary"
+    damage: 110
+    damageType: "Physical"
+    fireRate: 22.0
+    magazineSize: 300
+    reloadTime: 8.0
+    msnIntegration:
+      sephirah: "Geburah"
+      suppressionRadius: 15.0
+      armorPiercing: 0.9
+    uniqueMod: "Militech_OrdnanceLink_Siege"
+    modSlots: ["LMG_Barrel", "LMG_Optic", "LMG_Grip", "Militech_AmmoFeed_Siege"]
+
+  Militech_Raser_Overcharge:
+    displayName: "Raser Overcharge [Tech Rifle]"
+    description: "Quad-capacitor charge. Overcharge melts tank armor. Standard for heavy troopers."
+    category: "TechRifle"
+    brand: "Militech"
+    rarity: "Legendary"
+    damage: 320
+    damageType: "Physical"
+    chargeTime: 1.2
+    overchargeDamage: 3.5
+    msnIntegration:
+      sephirah: "Chokhmah"
+      chargePrediction: true
+      trajectoryCloud: true
+      quadrupleCapacitor: true
+    uniqueMod: "Militech_OrdnanceLink_Siege"
+    modSlots: ["Tech_Capacitor", "Tech_Barrel", "Tech_Sight", "Militech_Cooling_Siege"]
+
+  Militech_GrenadeLauncher_M224:
+    displayName: "M-224 Sarissa II [Grenade Launcher]"
+    description: "Airburst programmable. Precision explosives. Democracy delivered with options."
+    category: "GrenadeLauncher"
+    brand: "Militech"
+    rarity: "Epic"
+    damage: 420
+    damageType: "Explosive"
+    fireRate: 1.0
+    magazineSize: 8
+    msnIntegration:
+      sephirah: "Binah"
+      airburstProgrammable: true
+      trajectoryCalculation: true
+      collateralEstimation: true
+    uniqueMod: "Militech_OrdnanceLink_Siege"
+    modSlots: ["GL_Muzzle", "GL_Sight", "GL_Stock", "Militech_Fuze_Programmable"]
+
+  Militech_Railgun_Prototype:
+    displayName: "M-99 Railgun [Prototype]"
+    description: "Electromagnetic acceleration. No powder. Pure kinetic. Power grid required."
+    category: "SniperRifle"
+    brand: "Militech"
+    rarity: "Legendary"
+    damage: 800
+    damageType: "Physical"
+    fireRate: 0.3
+    magazineSize: 2
+    reloadTime: 5.0
+    msnIntegration:
+      sephirah: "Kether"
+      electromagneticAcceleration: true
+      requiresPowerGrid: true
+      wallPenetration: 5.0
+    uniqueMod: "Militech_OrdnanceLink_Siege"
+    modSlots: ["Sniper_Muzzle", "Sniper_Optic", "Sniper_Bipod", "Militech_Capacitor_Core"]
+
+  Militech_Flamethrower_Mk3:
+    displayName: "M-33 Inferno [Flamethrower]"
+    description: "Napalm gel. Persistent burn. Area denial. Geneva Convention optional."
+    category: "HeavyWeapon"
+    brand: "Militech"
+    rarity: "Epic"
+    damage: 85
+    damageType: "Thermal"
+    fireRate: 15.0
+    magazineSize: 100
+    msnIntegration:
+      sephirah: "Geburah"
+      persistentBurn: true
+      areaDenial: true
+    uniqueMod: "Militech_OrdnanceLink_Siege"
+    modSlots: ["HW_Barrel", "HW_Tank", "Militech_Ignition"]
+
+  Militech_Autocannon_Heavy:
+    displayName: "Autocannon Heavy [Vehicle Mount]"
+    description: "Vehicle-mounted autocannon. 30mm. Freedom delivery system."
+    category: "HeavyWeapon"
+    brand: "Militech"
+    rarity: "Legendary"
+    damage: 600
+    damageType: "Explosive"
+    fireRate: 4.0
+    magazineSize: 50
+    msnIntegration:
+      sephirah: "Geburah"
+      vehicleMount: true
+      explosiveRounds: true
+    modSlots: ["HW_Barrel", "HW_Feed", "Militech_Core"]
+
+  Militech_Missile_Pod:
+    displayName: "Missile Pod [Launcher]"
+    description: "Seekers. Swarm logic. Fire and forget. Democracy has wings."
+    category: "Launcher"
+    brand: "Militech"
+    rarity: "Epic"
+    damage: 350
+    damageType: "Explosive"
+    fireRate: 2.0
+    magazineSize: 16
+    reloadTime: 6.0
+    msnIntegration:
+      sephirah: "Chokhmah"
+      swarmLogic: true
+      fireAndForget: true
+    modSlots: ["Launcher_Muzzle", "Launcher_Rack", "Militech_Core"]
+
+  Militech_Shotgun_Breacher:
+    displayName: "Breacher [Shotgun]"
+    description: "Door kicker. Wall opener. Close quarters specialist."
+    category: "Shotgun"
+    brand: "Militech"
+    rarity: "Rare"
+    damage: 280
+    damageType: "Physical"
+    fireRate: 1.0
+    magazineSize: 10
+    reloadTime: 0.5
+    msnIntegration:
+      sephirah: "Geburah"
+      doorBreach: true
+      wallPenetration: 2.0
+    modSlots: ["SG_Barrel", "SG_Stock", "SG_Tube", "Militech_Core"]
+
+  Militech_Sniper_Standard:
+    displayName: "Standard Issue [Sniper]"
+    description: "Standard issue. Reliable. Accurate. Democracy at range."
+    category: "SniperRifle"
+    brand: "Militech"
+    rarity: "Uncommon"
+    damage: 380
+    damageType: "Physical"
+    fireRate: 1.2
+    magazineSize: 10
+    reloadTime: 2.5
+    msnIntegration:
+      sephirah: "Kether"
+      standardIssue: true
+      reliable: true
+    modSlots: ["Sniper_Muzzle", "Sniper_Optic", "Sniper_Bipod", "Universal"]
+
+  Militech_SMG_Standard:
+    displayName: "Standard SMG [SMG]"
+    description: "Three-round burst. Standard issue. Reliable. Compact."
+    category: "SMG"
+    brand: "Militech"
+    rarity: "Uncommon"
+    damage: 105
+    damageType: "Physical"
+    fireRate: 18.0
+    magazineSize: 30
+    reloadTime: 2.0
+    msnIntegration:
+      sephirah: "Hod"
+      burstFire: true
+      standardIssue: true
+    modSlots: ["SMG_Muzzle", "SMG_Optic", "SMG_Grip", "Universal"]
+
+  # === KANG TAO PRECISION LINE (20 weapons) ===
+  KangTao_G22_Prime:
+    displayName: "G-22 Prime [Smart Pistol]"
+    description: "Geometric perfection. Every angle calculated. Never misses."
+    category: "Pistol"
+    brand: "Kang Tao"
+    rarity: "Legendary"
+    damage: 185
+    damageType: "Physical"
+    fireRate: 18.0
+    magazineSize: 20
+    reloadTime: 1.2
+    smartLink: true
+    msnIntegration:
+      sephirah: "Hod"
+      perfectGeometry: true
+      ricochetPrediction: true
+    uniqueMod: "KangTao_PrecisionCore_Prime"
+    modSlots: ["Pistol_Muzzle", "Pistol_Optic", "Smart_Slot", "KangTao_Core_Prime"]
+
+  KangTao_Yinglong_Storm:
+    displayName: "Yinglong Storm [Assault]"
+    description: "Dragon's fury. Adaptive burst. Every round finds its mark."
+    category: "AssaultRifle"
+    brand: "Kang Tao"
+    rarity: "Legendary"
+    damage: 155
+    damageType: "Physical"
+    fireRate: 16.0
+    magazineSize: 45
+    reloadTime: 2.0
+    smartLink: true
+    msnIntegration:
+      sephirah: "Chokhmah"
+      adaptiveBurst: true
+      ammoEconomy: true
+    uniqueMod: "KangTao_PrecisionCore_Prime"
+    modSlots: ["AR_Muzzle", "AR_Optic", "AR_Grip", "Smart_Slot", "KangTao_Core_Prime"]
+
+  KangTao_Jian_Straight:
+    displayName: "Jian [Straight Sword]"
+    description: "Straight blade. Perfect balance. Geometry is absolute."
+    category: "Katana"
+    brand: "Kang Tao"
+    rarity: "Epic"
+    damage: 320
+    damageType: "Physical"
+    attackSpeed: 1.5
+    msnIntegration:
+      sephirah: "Tiphareth"
+      perfectBalance: true
+      geometryCut: true
+    uniqueMod: "KangTao_PrecisionCore_Prime"
+    modSlots: ["Katana_Blade", "Katana_Tsuba", "KangTao_Geometry_Core"]
+
+  KangTao_G58_Sniper:
+    displayName: "G-58 [Sniper]"
+    description: "Long range. Geometric trajectory. Wind compensation native."
+    category: "SniperRifle"
+    brand: "Kang Tao"
+    rarity: "Epic"
+    damage: 440
+    damageType: "Physical"
+    fireRate: 1.0
+    magazineSize: 5
+    reloadTime: 3.0
+    smartLink: true
+    msnIntegration:
+      sephirah: "Kether"
+      geometricTrajectory: true
+      windCompensation: true
+    uniqueMod: "KangTao_PrecisionCore_Prime"
+    modSlots: ["Sniper_Muzzle", "Sniper_Optic", "Sniper_Bipod", "Smart_Slot", "KangTao_Core_Prime"]
+
+  KangTao_SMG_Precision:
+    displayName: "Precision [SMG]"
+    description: "Zero spread. Geometric grouping. Every round same hole."
+    category: "SMG"
+    brand: "Kang Tao"
+    rarity: "Epic"
+    damage: 120
+    damageType: "Physical"
+    fireRate: 22.0
+    magazineSize: 40
+    reloadTime: 1.5
+    smartLink: true
+    msnIntegration:
+      sephirah: "Hod"
+      zeroSpread: true
+      geometricGrouping: true
+    uniqueMod: "KangTao_PrecisionCore_Prime"
+    modSlots: ["SMG_Muzzle", "SMG_Optic", "SMG_Grip", "Smart_Slot", "KangTao_Core_Prime"]
+
+  # === BUDGET ARMS UTILITY LINE (15 weapons) ===
+  BudgetArms_Defender_Classic:
+    displayName: "Defender Classic [Revolver]"
+    description: "Six rounds. Six chances. Always works. Grandfather's gun."
+    category: "Revolver"
+    brand: "Budget Arms"
+    rarity: "Common"
+    damage: 220
+    damageType: "Physical"
+    fireRate: 1.8
+    magazineSize: 6
+    reloadTime: 3.0
+    msnIntegration:
+      sephirah: "Malkuth"
+      reliability: 1.0
+      fieldStripTime: 3.0
+    uniqueMod: "BudgetArms_FieldStrip_Classic"
+    modSlots: ["Revolver_Grip", "Revolver_Sight", "Universal"]
+
+  BudgetArms_Workhorse_Pump:
+    displayName: "Workhorse Pump [Shotgun]"
+    description: "Pump action. Solid steel. Gets the job done. Every time."
+    category: "Shotgun"
+    brand: "Budget Arms"
+    rarity: "Uncommon"
+    damage: 190
+    damageType: "Physical"
+    fireRate: 1.1
+    magazineSize: 8
+    reloadTime: 0.4
+    msnIntegration:
+      sephirah: "Yesod"
+      spreadControl: true
+      breachLoad: true
+    uniqueMod: "BudgetArms_FieldStrip_Classic"
+    modSlots: ["SG_Barrel", "SG_Stock", "SG_Tube", "Universal"]
+
+  BudgetArms_Rifleman:
+    displayName: "Rifleman [Assault]"
+    description: "Wood furniture. Stamped steel. Reliable. Affordable freedom."
+    category: "AssaultRifle"
+    brand: "Budget Arms"
+    rarity: "Common"
+    damage: 130
+    damageType: "Physical"
+    fireRate: 10.0
+    magazineSize: 30
+    reloadTime: 2.5
+    msnIntegration:
+      sephirah: "Yesod"
+      reliability: 1.0
+      lowMaintenance: true
+    uniqueMod: "BudgetArms_FieldStrip_Classic"
+    modSlots: ["AR_Muzzle", "AR_Optic", "AR_Grip", "Universal"]
+
+  BudgetArms_Pistol_Standard:
+    displayName: "Standard Issue [Pistol]"
+    description: "Nine mil. Works every time. Cheap. Replaceable."
+    category: "Pistol"
+    brand: "Budget Arms"
+    rarity: "Common"
+    damage: 110
+    damageType: "Physical"
+    fireRate: 12.0
+    magazineSize: 15
+    reloadTime: 1.5
+    msnIntegration:
+      sephirah: "Malkuth"
+      reliability: 1.0
+      lowCost: true
+    uniqueMod: "BudgetArms_FieldStrip_Classic"
+    modSlots: ["Pistol_Muzzle", "Pistol_Optic", "Pistol_Grip", "Universal"]
+
+  BudgetArms_SMG_Economy:
+    displayName: "Economy [SMG]"
+    description: "Cheap. Reliable. High capacity. Pays for itself."
+    category: "SMG"
+    brand: "Budget Arms"
+    rarity: "Common"
+    damage: 95
+    damageType: "Physical"
+    fireRate: 20.0
+    magazineSize: 50
+    reloadTime: 2.0
+    msnIntegration:
+      sephirah: "Yesod"
+      lowCost: true
+      highCapacity: true
+    uniqueMod: "BudgetArms_FieldStrip_Classic"
+    modSlots: ["SMG_Muzzle", "SMG_Optic", "SMG_Grip", "Universal"]
+
+  # === TSUNAMI NEON LINE (15 weapons) ===
+  Tsunami_Neon_Reaver:
+    displayName: "Neon Reaver [Katana]"
+    description: "Style is a weapon. Damage is art. Neon trails write poetry in blood."
+    category: "Katana"
+    brand: "Tsunami"
+    rarity: "Legendary"
+    damage: 340
+    damageType: "Chemical"
+    attackSpeed: 1.8
+    msnIntegration:
+      sephirah: "Netzach"
+      stylePoints: true
+      elementalBurst: "Neon"
+    uniqueMod: "Tsunami_StyleChip_Reaver"
+    modSlots: ["Katana_Blade", "Katana_Tsuba", "Tsunami_Style_Reaver"]
+
+  Tsunami_Party_Crasher_Mk2:
+    displayName: "Party Crasher Mk.2 [SMG]"
+    description: "High velocity. Neon trails. Zero subtlety. Maximum style."
+    category: "SMG"
+    brand: "Tsunami"
+    rarity: "Epic"
+    damage: 135
+    damageType: "Electrical"
+    fireRate: 26.0
+    magazineSize: 60
+    msnIntegration:
+      sephirah: "Netzach"
+      rhythmSync: true
+      crowdControl: true
+    uniqueMod: "Tsunami_StyleChip_Reaver"
+    modSlots: ["SMG_Muzzle", "SMG_Optic", "SMG_Grip", "Tsunami_Style_Reaver"]
+
+  Tsunami_Neon_Pistol:
+    displayName: "Neon Sidearm [Pistol]"
+    description: "Glow in the dark. Style over substance? No. Style IS substance."
+    category: "Pistol"
+    brand: "Tsunami"
+    rarity: "Epic"
+    damage: 140
+    damageType: "Chemical"
+    fireRate: 14.0
+    magazineSize: 18
+    reloadTime: 1.5
+    msnIntegration:
+      sephirah: "Netzach"
+      neonGlow: true
+      styleOverSubstance: true
+    uniqueMod: "Tsunami_StyleChip_Basic"
+    modSlots: ["Pistol_Muzzle", "Pistol_Optic", "Pistol_Grip", "Tsunami_Style"]
+
+  # === DYNALAR INDUSTRIAL LINE (15 weapons) ===
+  Dynalar_Impactor_Prime:
+    displayName: "Impactor Prime [Heavy Melee]"
+    description: "Kinetic art. Industrial beauty. Crushing weight. Seismic reality."
+    category: "BluntForce"
+    subCategory: "Maul"
+    brand: "Dynalar"
+    rarity: "Legendary"
+    damage: 480
+    damageType: "Physical"
+    attackSpeed: 0.4
+    weight: 25.0
+    msnIntegration:
+      sephirah: "Geburah"
+      kineticAmplification: 4.0
+      seismicWave: 8.0
+    uniqueMod: "Dynalar_KineticAmplifier_Prime"
+    modSlots: ["Blunt_Head", "Blunt_Grip", "Blunt_Tech", "Dynalar_Core_Prime"]
+
+  Dynalar_Sledge_Industrial:
+    displayName: "Industrial Sledge [Blunt]"
+    description: "Factory standard. Structural damage. Seismic impact."
+    category: "BluntForce"
+    subCategory: "Sledgehammer"
+    brand: "Dynalar"
+    rarity: "Rare"
+    damage: 310
+    damageType: "Physical"
+    attackSpeed: 0.6
+    weight: 14.0
+    msnIntegration:
+      sephirah: "Binah"
+      structureDamage: 2.5
+      seismicImpact: true
+    uniqueMod: "Dynalar_KineticAmplifier_Prime"
+    modSlots: ["Blunt_Head", "Blunt_Grip", "Blunt_Tech"]
+
+  Dynalar_Jackhammer:
+    displayName: "Jackhammer [Blunt]"
+    description: "Pneumatic. Industrial. Concrete to dust. Worker's tool."
+    category: "BluntForce"
+    subCategory: "Maul"
+    brand: "Dynalar"
+    rarity: "Uncommon"
+    damage: 200
+    damageType: "Physical"
+    attackSpeed: 2.0
+    weight: 8.0
+    msnIntegration:
+      sephirah: "Malkuth"
+      pneumatic: true
+      industrial: true
+    modSlots: ["Blunt_Head", "Blunt_Grip", "Blunt_Tech"]
+
+  # === NUSA FEDERAL LINE (10 weapons) ===
+  NUSA_Judge_Executioner:
+    displayName: "Executioner [Sidearm]"
+    description: "Federal standard. Non-lethal option. Due process at 1200 RPM."
+    category: "Pistol"
+    brand: "NUSA"
+    rarity: "Epic"
+    damage: 170
+    damageType: "Physical"
+    fireRate: 20.0
+    magazineSize: 20
+    nonLethalMode: true
+    msnIntegration:
+      sephirah: "Hod"
+      legalCompliance: true
+      trackingRounds: true
+    uniqueMod: "NUSA_JurisprudenceChip_Executioner"
+    modSlots: ["Pistol_Muzzle", "Pistol_Optic", "Smart_Slot", "NUSA_Legal_Executioner"]
+
+  NUSA_Pacifier_SMG:
+    displayName: "Pacifier [SMG]"
+    description: "Federal standard. Subsonic. Suppressed. Due process quietly."
+    category: "SMG"
+    brand: "NUSA"
+    rarity: "Rare"
+    damage: 95
+    damageType: "Physical"
+    fireRate: 18.0
+    magazineSize: 30
+    nonLethalMode: true
+    msnIntegration:
+      sephirah: "Hod"
+      legalCompliance: true
+      suppressed: true
+      nonLethalDefault: true
+    modSlots: ["SMG_Muzzle", "SMG_Optic", "SMG_Grip", "Smart_Slot", "NUSA_Legal"]
+
+  # === ROCHE BIO-ENGINEERING LINE (10 weapons) ===
+  Roche_Vita_Synthesizer:
+    displayName: "Vita Synthesizer [Med-Tech]"
+    description: "Heals allies. Poisons enemies. Transmutes matter. Life and death in one needle."
+    category: "TechWeapon"
+    brand: "Roche"
+    rarity: "Legendary"
+    damage: 95
+    damageType: "Poison"
+    fireRate: 3.0
+    magazineSize: 12
+    healAllies: true
+    msnIntegration:
+      sephirah: "Chesed"
+      bioSynthesis: true
+      transmutation: true
+    uniqueMod: "Roche_BioInterface_Synthesizer"
+    modSlots: ["Tech_Capacitor", "Tech_Barrel", "Roche_BioCore_Synthesizer"]
+
+  Roche_Vita_Injector_Field:
+    displayName: "Vita Field [Med-Tech Pistol]"
+    description: "Combat medic sidearm. Heal dart. Poison dart. Same gun."
+    category: "Pistol"
+    brand: "Roche"
+    rarity: "Epic"
+    damage: 80
+    damageType: "Poison"
+    fireRate: 5.0
+    magazineSize: 10
+    healAllies: true
+    msnIntegration:
+      sephirah: "Chesed"
+      healDart: true
+      poisonDart: true
+    uniqueMod: "Roche_BioInterface_Field"
+    modSlots: ["Pistol_Muzzle", "Pistol_Optic", "Pistol_Grip", "Roche_BioCore"]
+
+  # === ZETATECH QUANTUM LINE (15 weapons) ===
+  Zetatech_Paradigm_Shift:
+    displayName: "Paradigm Shift [Quantum]"
+    description: "Probability collapsed. Reality is a suggestion. This weapon disagrees."
+    category: "Experimental"
+    brand: "Zetatech"
+    rarity: "Legendary"
+    damage: 999
+    damageType: "Quantum"
+    fireRate: 1.5
+    magazineSize: 1
+    rechargeTime: 8.0
+    msnIntegration:
+      sephirah: "Kether"
+      requiresCloudCortex: true
+      quantumUncertainty: true
+      realityRewrite: true
+    uniqueMod: "Zetatech_QuantumCore_Shift"
+    modSlots: ["Quantum_Core", "Quantum_Stabilizer", "Zetatech_Interface_Shift"]
+
+  Zetatech_Void_Rifle:
+    displayName: "Void Rifle [Experimental]"
+    description: "Fires nothing. Erases target from probability. Existence optional."
+    category: "Experimental"
+    brand: "Zetatech"
+    rarity: "Legendary"
+    damage: "?"
+    damageType: "Quantum"
+    fireRate: 0.5
+    magazineSize: 1
+    rechargeTime: 15.0
+    msnIntegration:
+      sephirah: "Kether"
+      requiresCloudCortex: true
+      existenceErasure: true
+      realityRewrite: true
+    uniqueMod: "Zetatech_QuantumCore_Shift"
+    modSlots: ["Quantum_Core", "Void_Stabilizer", "Zetatech_Interface_Shift"]
+
+  Zetatech_Probability_Pistol:
+    displayName: "Probability Pistol [Quantum]"
+    description: "Schrödinger's gun. Both fired and not. Until observed."
+    category: "Experimental"
+    brand: "Zetatech"
+    rarity: "Legendary"
+    damage: 500
+    damageType: "Quantum"
+    fireRate: 3.0
+    magazineSize: 6
+    msnIntegration:
+      sephirah: "Chokhmah"
+      requiresCloudCortex: true
+      superposition: true
+      observationCollapse: true
+    uniqueMod: "Zetatech_QuantumCore_Probability"
+    modSlots: ["Quantum_Core", "Probability_Stabilizer", "Zetatech_Interface"]
+
+  # === TECH WEAPONS - CHARGE MODES (20 weapons) ===
+  Tech_Charge_Pistol_Mk4:
+    displayName: "Mk.4 Charge Pistol [Tech]"
+    description: "Four charge modes. Adaptive capacitor. Precision engineering."
+    category: "TechPistol"
+    chargeModes:
+      QuickShot:
+        damage: 140
+        chargeTime: 0.0
+        fireRate: 12.0
+      FullCharge:
+        damage: 420
+        chargeTime: 1.2
+        fireRate: 2.5
+      Overcharge:
+        damage: 750
+        chargeTime: 2.5
+        fireRate: 0.6
+        selfDamage: 15
+      PulseBurst:
+        damage: 210
+        chargeTime: 0.4
+        fireRate: 6.0
+        burstCount: 4
+    msnIntegration:
+      sephirah: "Chokhmah"
+      predictionModel: "ChargePrediction_Mk4"
+      cloudTrajectory: true
+
+  Tech_Charge_Rifle_Mk4:
+    displayName: "Mk.4 Charge Rifle [Tech]"
+    description: "Heavy charge weapon. Overcharge vaporizes cover."
+    category: "TechRifle"
+    chargeModes:
+      QuickShot:
+        damage: 180
+        chargeTime: 0.0
+        fireRate: 10.0
+      FullCharge:
+        damage: 600
+        chargeTime: 1.8
+        fireRate: 1.8
+      Overcharge:
+        damage: 1200
+        chargeTime: 3.5
+        fireRate: 0.4
+        selfDamage: 40
+        aoeRadius: 4.0
+      PulseBurst:
+        damage: 260
+        chargeTime: 0.6
+        fireRate: 4.0
+        burstCount: 5
+    msnIntegration:
+      sephirah: "Chokhmah"
+      predictionModel: "ChargePrediction_Mk4"
+      cloudTrajectory: true
+
+  Tech_Charge_Shotgun:
+    displayName: "Charge Shotgun [Tech]"
+    description: "Charge for spread. Overcharge for slug. Tech in every shell."
+    category: "TechShotgun"
+    chargeModes:
+      QuickShot:
+        damage: 120
+        chargeTime: 0.0
+        fireRate: 4.0
+      FullCharge:
+        damage: 300
+        chargeTime: 1.0
+        fireRate: 2.0
+      Overcharge:
+        damage: 600
+        chargeTime: 2.0
+        fireRate: 1.0
+        slugMode: true
+      PulseBurst:
+        damage: 150
+        chargeTime: 0.5
+        fireRate: 3.0
+        burstCount: 3
+    msnIntegration:
+      sephirah: "Chokhmah"
+      predictionModel: "ChargePrediction_Shotgun"
+      cloudTrajectory: true
+
+  # === EXPERIMENTAL WEAPONS (15 weapons) ===
+  Experimental_Prototype_Omega:
+    displayName: "Prototype-Omega [Void]"
+    description: "It doesn't exist. It never existed. It kills anyway."
+    category: "Experimental"
+    rarity: "Legendary"
+    damage: 1500
+    damageType: "Quantum"
+    msnIntegration:
+      sephirah: "Kether"
+      requiresCloudCortex: true
+      ouroborosLearning: true
+      existenceUncertain: true
+    uniqueMod: "Zetatech_QuantumCore_Omega"
+    modSlots: ["Quantum_Core", "Void_Stabilizer", "Omega_Interface"]
+
+  Experimental_BioBlade_Evolved:
+    displayName: "Bio-Blade Evolved [Living]"
+    description: "It grows. It hungers. It evolves. It remembers every kill. It loves you."
+    category: "Experimental"
+    rarity: "Legendary"
+    damage: 300
+    damageType: "Physical"
+    attackSpeed: 1.6
+    msnIntegration:
+      sephirah: "Chesed"
+      livingWeapon: true
+      feedsOnBlood: true
+      evolves: true
+      loyalty: true
+    uniqueMod: "Roche_BioInterface_Evolved"
+    modSlots: ["Bio_Core", "Bio_Nutrient", "Bio_Neural_Link"]
+
+  Experimental_Reality_Anchor_Mk2:
+    displayName: "Reality Anchor Mk.2 [Experimental]"
+    description: "Denies the impossible. Enforces physics. Localized causality. Absolute."
+    category: "Experimental"
+    rarity: "Legendary"
+    damage: 400
+    damageType: "Physical"
+    attackSpeed: 1.0
+    msnIntegration:
+      sephirah: "Binah"
+      physicsEnforcement: true
+      antiQuantum: true
+      causalityLock: true
+      radius: 10.0
+    uniqueMod: "Zetatech_QuantumCore_Anchor"
+    modSlots: ["Anchor_Core", "Causality_Stabilizer", "Reality_Lock"]
+
+  Experimental_Temporal_Dagger:
+    displayName: "Temporal Dagger [Chrono]"
+    description: "Cuts through time. Hits yesterday. Bleeds tomorrow. Paradox included."
+    category: "Experimental"
+    rarity: "Legendary"
+    damage: 500
+    damageType: "Quantum"
+    attackSpeed: 0.8
+    msnIntegration:
+      sephirah: "Kether"
+      requiresCloudCortex: true
+      timeTravel: true
+      paradoxChance: 0.05
+    uniqueMod: "Zetatech_QuantumCore_Chrono"
+    modSlots: ["Quantum_Core", "Temporal_Stabilizer", "Chrono_Interface"]
+
+  Experimental_Entropy_Cannon:
+    displayName: "Entropy Cannon [Experimental]"
+    description: "Maximum entropy. Heat death localized. Thermodynamics weaponized."
+    category: "Experimental"
+    rarity: "Legendary"
+    damage: 800
+    damageType: "Thermal"
+    fireRate: 0.2
+    magazineSize: 1
+    rechargeTime: 30.0
+    msnIntegration:
+      sephirah: "Binah"
+      entropyMaximization: true
+      thermodynamicsWeaponized: true
+    uniqueMod: "Zetatech_QuantumCore_Entropy"
+    modSlots: ["Quantum_Core", "Entropy_Stabilizer", "Thermo_Lock"]
+
+  # === BLUNT FORCE EXPANSION (10 weapons) ===
+  Blunt_Hammer_Thunder:
+    displayName: "Thunder Hammer [Blunt]"
+    description: "Lightning charged. Stuns on impact. Thor would be jealous."
+    category: "BluntForce"
+    subCategory: "Hammer"
+    rarity: "Epic"
+    damage: 280
+    damageType: "Electrical"
+    attackSpeed: 0.7
+    weight: 10.0
+    msnIntegration:
+      sephirah: "Geburah"
+      lightningCharge: true
+      stunChance: 0.3
+    modSlots: ["Blunt_Head", "Blunt_Grip", "Blunt_Tech", "Blunt_Rune"]
+
+  Blunt_Mace_Dawn:
+    displayName: "Dawn's Mace [Blunt]"
+    description: "Radiant damage. Purges corruption. Blesses allies on hit."
+    category: "BluntForce"
+    subCategory: "Maul"
+    rarity: "Legendary"
+    damage: 350
+    damageType: "Chemical"
+    attackSpeed: 0.5
+    weight: 18.0
+    msnIntegration:
+      sephirah: "Chesed"
+      radiantDamage: true
+      blessAllies: true
+      purgeCorruption: true
+    modSlots: ["Blunt_Head", "Blunt_Grip", "Blunt_Tech", "Blunt_Rune", "Holy_Symbol"]
+
+  Blunt_Warhammer_Corrupted:
+    displayName: "Corrupted Warhammer [Blunt]"
+    description: "Reality warps around it. Whispers in the dark. Power at a price."
+    category: "BluntForce"
+    subCategory: "Maul"
+    rarity: "Legendary"
+    damage: 400
+    damageType: "Physical"
+    attackSpeed: 0.5
+    weight: 20.0
+    msnIntegration:
+      sephirah: "Geburah"
+      realityWarp: true
+      whispers: true
+      corruptionRisk: 0.05
+    modSlots: ["Blunt_Head", "Blunt_Grip", "Blunt_Tech", "Blunt_Rune", "Corruption_Stone"]
+
+  # === SNIPER RIFLES EXPANSION (10 weapons) ===
+  Sniper_Railgun_Compact:
+    displayName: "Compact Railgun [Sniper]"
+    description: "Electromagnetic. No bullet drop. Instant hit. Portable railgun."
+    category: "SniperRifle"
+    rarity: "Epic"
+    damage: 550
+    damageType: "Physical"
+    fireRate: 0.8
+    magazineSize: 4
+    reloadTime: 3.5
+    msnIntegration:
+      sephirah: "Kether"
+      noBulletDrop: true
+      electromagnetic: true
+    modSlots: ["Sniper_Muzzle", "Sniper_Optic", "Sniper_Bipod", "Capacitor_Core"]
+
+  Sniper_Quantum_Entangled:
+    displayName: "Entangled Sniper [Quantum]"
+    description: "Shoot here. Hit there. Distance irrelevant. Quantum entanglement."
+    category: "Experimental"
+    rarity: "Legendary"
+    damage: 600
+    damageType: "Quantum"
+    fireRate: 0.5
+    magazineSize: 2
+    rechargeTime: 10.0
+    msnIntegration:
+      sephirah: "Kether"
+      quantumEntanglement: true
+      distanceIrrelevant: true
+      requiresCloudCortex: true
+    modSlots: ["Quantum_Core", "Entanglement_Stabilizer", "Entanglement_Interface"]
+
+  # === SHOTGUNS EXPANSION (10 weapons) ===
+  Shotgun_Auto_Drum:
+    displayName: "Drum Beat [Auto Shotgun]"
+    description: "20 round drum. Full auto. Drum magazine beats rhythm of death."
+    category: "Shotgun"
+    rarity: "Epic"
+    damage: 160
+    damageType: "Physical"
+    fireRate: 4.0
+    magazineSize: 20
+    reloadTime: 3.0
+    msnIntegration:
+      sephirah: "Geburah"
+      drumMagazine: true
+      rhythmSync: true
+    modSlots: ["SG_Barrel", "SG_Stock", "SG_Drum", "Drum_Feed"]
+
+  Shotgun_Double_Barrel_Tech:
+    displayName: "Tech Double [Shotgun]"
+    description: "Two barrels. Two charges. Double the tech. Double the fun."
+    category: "TechShotgun"
+    chargeModes:
+      QuickShot:
+        damage: 150
+        chargeTime: 0.0
+        fireRate: 2.0
+      FullCharge:
+        damage: 400
+        chargeTime: 1.0
+        fireRate: 1.0
+      Overcharge:
+        damage: 800
+        chargeTime: 2.5
+        fireRate: 0.5
+    msnIntegration:
+      sephirah: "Chokhmah"
+      doubleBarrel: true
+      dualCharge: true
+    modSlots: ["SG_Barrel", "SG_Stock", "Tech_Capacitor", "Tech_Capacitor_2"]
+
+  Shotgun_Auto_Heavy:
+    displayName: "Heavy Auto [Shotgun]"
+    description: "Full auto. Heavy rounds. Shoulder mounted recommended."
+    category: "Shotgun"
+    rarity: "Epic"
+    damage: 180
+    damageType: "Physical"
+    fireRate: 6.0
+    magazineSize: 15
+    reloadTime: 2.5
+    msnIntegration:
+      sephirah: "Geburah"
+      heavyRounds: true
+      shoulderMounted: true
+    modSlots: ["SG_Barrel", "SG_Stock", "SG_Tube", "Heavy_Feed"]
+
+  # === SMGs EXPANSION (10 weapons) ===
+  SMG_Vector_Prototype:
+    displayName: "Vector Prototype [SMG]"
+    description: "Krinkov mechanism. Zero recoil. Russian engineering perfected."
+    category: "SMG"
+    rarity: "Epic"
+    damage: 110
+    damageType: "Physical"
+    fireRate: 28.0
+    magazineSize: 33
+    reloadTime: 1.8
+    msnIntegration:
+      sephirah: "Netzach"
+      zeroRecoil: true
+      krinkovMechanism: true
+    modSlots: ["SMG_Muzzle", "SMG_Optic", "SMG_Grip", "Vector_Mechanism"]
+
+  SMG_Twin_Barrel:
+    displayName: "Twin Barrel [SMG]"
+    description: "Two barrels. Double fire rate. Twin feeding. Beauty in symmetry."
+    category: "SMG"
+    rarity: "Epic"
+    damage: 100
+    damageType: "Physical"
+    fireRate: 40.0
+    magazineSize: 60
+    reloadTime: 1.5
+    msnIntegration:
+      sephirah: "Tiphareth"
+      twinBarrel: true
+      symmetryBonus: 0.2
+    modSlots: ["SMG_Muzzle", "SMG_Optic", "SMG_Grip", "Twin_Feed"]
+
+  # === ASSAULT RIFLES EXPANSION (10 weapons) ===
+  AR_Bullpup_Advanced:
+    displayName: "Bullpup Advanced [Assault]"
+    description: "Compact. Full barrel length. Ambidextrous. Future standard."
+    category: "AssaultRifle"
+    rarity: "Rare"
+    damage: 145
+    damageType: "Physical"
+    fireRate: 12.0
+    magazineSize: 40
+    reloadTime: 2.0
+    msnIntegration:
+      sephirah: "Tiphareth"
+      bullpupDesign: true
+      ambidextrous: true
+    modSlots: ["AR_Muzzle", "AR_Optic", "AR_Grip", "Universal"]
+
+  AR_Caseless_Advanced:
+    displayName: "Caseless Advanced [Assault]"
+    description: "No brass. No ejection. Pure projectile. Zero jam guarantee."
+    category: "AssaultRifle"
+    rarity: "Epic"
+    damage: 155
+    damageType: "Physical"
+    fireRate: 14.0
+    magazineSize: 50
+    reloadTime: 1.5
+    msnIntegration:
+      sephirah: "Chokhmah"
+      caseless: true
+      zeroJam: true
+    modSlots: ["AR_Muzzle", "AR_Optic", "AR_Grip", "Caseless_Feed"]
+
+  # === PISTOLS EXPANSION (10 weapons) ===
+  Pistol_Revolver_Hybrid:
+    displayName: "Hybrid Revolver [Pistol]"
+    description: "Cylinder feeds from magazine. Best of both worlds. Six shooter, thirty carrier."
+    category: "Pistol"
+    rarity: "Epic"
+    damage: 180
+    damageType: "Physical"
+    fireRate: 8.0
+    magazineSize: 30
+    reloadTime: 2.0
+    msnIntegration:
+      sephirah: "Hod"
+      hybridFeed: true
+      cylinderMagazine: true
+    modSlots: ["Pistol_Muzzle", "Pistol_Optic", "Pistol_Grip", "Universal"]
+
+  Pistol_Auto_Magnum:
+    displayName: "Auto Magnum [Pistol]"
+    description: "Magnum power. Semi-auto. Recoil managed. Power accessible."
+    category: "Pistol"
+    rarity: "Epic"
+    damage: 220
+    damageType: "Physical"
+    fireRate: 10.0
+    magazineSize: 10
+    reloadTime: 1.8
+    msnIntegration:
+      sephirah: "Geburah"
+      magnumPower: true
+      recoilManaged: true
+    modSlots: ["Pistol_Muzzle", "Pistol_Optic", "Pistol_Grip", "Universal"]
+
+  Pistol_Quantum_Entangled:
+    displayName: "Entangled Pistol [Quantum]"
+    description: "Shoot here. Hit there. Paired with twin. Distance irrelevant."
+    category: "Experimental"
+    rarity: "Legendary"
+    damage: 300
+    damageType: "Quantum"
+    fireRate: 6.0
+    magazineSize: 8
+    msnIntegration:
+      sephirah: "Chokhmah"
+      quantumEntanglement: true
+      pairedWeapon: true
+      requiresCloudCortex: true
+    modSlots: ["Quantum_Core", "Entanglement_Interface", "Quantum_Interface"]

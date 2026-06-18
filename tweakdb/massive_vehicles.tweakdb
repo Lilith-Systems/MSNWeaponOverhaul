@@ -1,0 +1,391 @@
+// MSN Weapon Overhaul - Massive Expansion Part 3: Vehicles
+// File: r6/mods/MSNWeaponOverhaul/tweakdb/massive_vehicles.tweakdb
+
+# ============================================================
+# VEHICLES (15 NEW VEHICLES)
+# ============================================================
+
+Vehicle:MSN_Aerodyne_Specter {
+  displayName: "Specter [Aerodyne]"
+  description: "Stealth VTOL. Active camouflage. MSN Cerebellum autopilot. Silent as Lilith's whisper."
+  category: "Aerodyne"
+  manufacturer: "Arasaka_MSN"
+  rarity: "Legendary"
+  price: 500000
+  stats:
+    topSpeed: 320
+    acceleration: 4.5
+    handling: 95
+    armor: 800
+    health: 5000
+  msnIntegration:
+    stealthVTOL: true
+    activeCamo: true
+    msnAutopilot: true
+    silentMode: true
+    nvgIntegration: true
+  weapons: ["Items.MSN_Smart_Missile_Pod", "Items.MSN_Laser_Cannon"]
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "Vehicle_Tech", "MSN_Core", "Stealth_Module"]
+}
+
+Vehicle:Militech_Manticore {
+  displayName: "Manticore [Militech]"
+  description: "Heavy combat AV. Railgun turret. Drone swarm bay. Democracy from above."
+  category: "Aerodyne"
+  manufacturer: "Militech"
+  rarity: "Epic"
+  price: 750000
+  stats:
+    topSpeed: 280
+    acceleration: 3.0
+    handling: 70
+    armor: 2000
+    health: 15000
+  msnIntegration:
+    railgunTurret: true
+    droneSwarm: true
+    ordnanceLink: true
+    msnAutopilot: true
+  weapons: ["Items.Militech_Railgun_Turret", "Items.Militech_Drone_Swarm"]
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "Vehicle_Tech", "Militech_Core", "Drone_Bay"]
+}
+
+Vehicle:KangTao_Dragonfly {
+  displayName: "Dragonfly [Kang Tao]"
+  description: "Precision strike VTOL. Geometric flight paths. Zero collateral damage."
+  category: "Aerodyne"
+  manufacturer: "Kang Tao"
+  rarity: "Legendary"
+  price: 600000
+  stats:
+    topSpeed: 350
+    acceleration: 5.0
+    handling: 100
+    armor: 600
+    health: 4000
+  msnIntegration:
+    precisionFlight: true
+    geometricPathing: true
+    zeroCollateral: true
+    msnAutopilot: true
+  weapons: ["Items.KangTao_Precision_Missile"]
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "Vehicle_Tech", "KangTao_Core", "Precision_Module"]
+}
+
+Vehicle:MSN_Ground_Sovereign {
+  displayName: "Sovereign [Ground Vehicle]"
+  description: "MSN Cerebellum on wheels. Autonomous combat driving. Reality rewrite suspension."
+  category: "Car"
+  manufacturer: "MSN_Custom"
+  rarity: "Legendary"
+  price: 300000
+  stats:
+    topSpeed: 220
+    acceleration: 3.5
+    handling: 90
+    armor: 1500
+    health: 8000
+  msnIntegration:
+    msnAutopilot: true
+    realitySuspension: true
+    sovereignDecree: true
+    ouroborosAdaptation: true
+  weapons: ["Items.MSN_Roof_Mounted_Smart_Gun"]
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "Vehicle_Tech", "MSN_Core", "Reality_Module"]
+}
+
+Vehicle:Tsunami_Phantom_Runner {
+  displayName: "Phantom Runner [Motorcycle]"
+  description: "Phase-shift bike. Neon trails. Through walls. Through time. Pure style."
+  category: "Motorcycle"
+  manufacturer: "Tsunami"
+  rarity: "Legendary"
+  price: 150000
+  stats:
+    topSpeed: 280
+    acceleration: 6.0
+    handling: 98
+    armor: 200
+    health: 2000
+  msnIntegration:
+    phaseShift: true
+    neonTrails: true
+    wallPhase: true
+    stylePoints: true
+  weapons: ["Items.Tsunami_Mounted_SMG"]
+  modSlots: ["Vehicle_Engine", "Vehicle_Tech", "Tsunami_Style", "Phase_Module"]
+}
+
+Vehicle:BudgetArms_Reliant {
+  displayName: "Reliant [Truck]"
+  description: "Runs on anything. Fix it with a rock. Never dies. Hauls everything."
+  category: "Truck"
+  manufacturer: "Budget Arms"
+  rarity: "Common"
+  price: 25000
+  stats:
+    topSpeed: 120
+    acceleration: 1.5
+    handling: 40
+    armor: 800
+    health: 10000
+  msnIntegration:
+    fieldRepair: true
+    universalFuel: true
+    indestructible: true
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "Universal_Mount", "Cargo_Expansion"]
+}
+
+Vehicle:Roche_Ambulance_Vita {
+  displayName: "Vita [Ambulance]"
+  description: "Mobile bio-lab. Heals on the move. Synthesizes medicine from air. Life support supreme."
+  category: "Van"
+  manufacturer: "Roche"
+  rarity: "Epic"
+  price: 200000
+  stats:
+    topSpeed: 160
+    acceleration: 2.5
+    handling: 60
+    armor: 500
+    health: 6000
+  msnIntegration:
+    bioSynthesis: true
+    mobileMedBay: true
+    autoHealRadius: 20.0
+    vitaSynthesizer: true
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "Roche_BioCore", "MedBay_Module"]
+}
+
+Vehicle:NUSA_Command_Carrier {
+  displayName: "Command Carrier [APC]"
+  description: "Mobile HQ. Federal authority. Orbital uplink. Due process on wheels."
+  category: "APC"
+  manufacturer: "NUSA"
+  rarity: "Legendary"
+  price: 1000000
+  stats:
+    topSpeed: 100
+    acceleration: 1.0
+    handling: 30
+    armor: 5000
+    health: 50000
+  msnIntegration:
+    orbitalUplink: true
+    federalAuthority: true
+    legalCompliance: true
+    commandCenter: true
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "NUSA_Core", "Command_Module", "Orbital_Link"]
+}
+
+Vehicle:Zetatech_Void_Runner {
+  displayName: "Void Runner [Experimental]"
+  description: "Exists between realities. Phases through obstacles. Probability drive."
+  category: "Experimental"
+  manufacturer: "Zetatech"
+  rarity: "Legendary"
+  price: 2000000
+  stats:
+    topSpeed: 400
+    acceleration: 10.0
+    handling: 120
+    armor: 300
+    health: 5000
+  msnIntegration:
+    phaseDrive: true
+    probabilityDrive: true
+    realityShift: true
+    cloudCortexRequired: true
+  weapons: ["Items.Zetatech_Quantum_Cannon"]
+  modSlots: ["Vehicle_Engine", "Quantum_Core", "Void_Stabilizer", "Zetatech_Interface"]
+}
+
+Vehicle:Dynalar_Landtrain {
+  displayName: "Landtrain [Heavy Transport]"
+  description: "Modular cars. Infinite length. Industrial might. Seismic presence."
+  category: "Train"
+  manufacturer: "Dynalar"
+  rarity: "Epic"
+  price: 2000000
+  stats:
+    topSpeed: 80
+    acceleration: 0.5
+    handling: 20
+    armor: 10000
+    health: 100000
+  msnIntegration:
+    modularCars: true
+    kineticAmplification: true
+    seismicWave: true
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "Dynalar_Core", "Coupling_Module", "Cargo_Car"]
+}
+
+Vehicle:Arasaka_Nightbird {
+  displayName: "Nightbird [Stealth Car]"
+  description: "Corporate ghost. Active camo. Silent engine. Executive escape vehicle."
+  category: "Car"
+  manufacturer: "Arasaka"
+  rarity: "Legendary"
+  price: 400000
+  stats:
+    topSpeed: 250
+    acceleration: 4.0
+    handling: 95
+    armor: 700
+    health: 6000
+  msnIntegration:
+    activeCamo: true
+    silentEngine: true
+    corporateTracking: true
+    executiveEscape: true
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "Vehicle_Tech", "Arasaka_Core", "Stealth_Module"]
+}
+
+Vehicle:Militech_IFV_Phalanx {
+  displayName: "Phalanx [IFV]"
+  description: "Infantry fighting vehicle. Autocannon. Missile pods. Squad transport. Freedom delivery."
+  category: "APC"
+  manufacturer: "Militech"
+  rarity: "Epic"
+  price: 800000
+  stats:
+    topSpeed: 90
+    acceleration: 2.0
+    handling: 50
+    armor: 3000
+    health: 20000
+  msnIntegration:
+    autocannon: true
+    missilePods: true
+    squadTransport: true
+    ordnanceLink: true
+  weapons: ["Items.Militech_Autocannon", "Items.Militech_Missile_Pods"]
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "Militech_Core", "Turret_Mount", "Squad_Bay"]
+}
+
+Vehicle:KangTao_Hoverboard {
+  displayName: "K-Board [Hoverboard]"
+  description: "Personal hover transport. Geometric stability. Fits in backpack. Kang Tao precision."
+  category: "Hoverboard"
+  manufacturer: "Kang Tao"
+  rarity: "Rare"
+  price: 5000
+  stats:
+    topSpeed: 60
+    acceleration: 8.0
+    handling: 90
+    armor: 50
+    health: 500
+  msnIntegration:
+    geometricStability: true
+    foldable: true
+    precisionControl: true
+  modSlots: ["Hover_Engine", "KangTao_Core", "Folding_Mechanism"]
+}
+
+Vehicle:MSN_Quantum_Skiff {
+  displayName: "Quantum Skiff [Personal]"
+  description: "Personal reality craft. Phase through traffic. Pocket dimension trunk. Lilith approved."
+  category: "Experimental"
+  manufacturer: "MSN_Custom"
+  rarity: "Legendary"
+  price: 750000
+  stats:
+    topSpeed: 300
+    acceleration: 8.0
+    handling: 100
+    armor: 400
+    health: 3000
+  msnIntegration:
+    phaseDrive: true
+    pocketDimension: true
+    realityShift: true
+    lilithBonded: true
+  weapons: ["Items.MSN_Quantum_Turret"]
+  modSlots: ["Quantum_Engine", "Quantum_Core", "Void_Stabilizer", "Lilith_Link"]
+}
+
+Vehicle:Roche_Vita_Transport {
+  displayName: "Vita Transport [Medical]"
+  description: "Mobile hospital. Bio-synthesis on wheels. Life support convoy."
+  category: "Van"
+  manufacturer: "Roche"
+  rarity: "Epic"
+  price: 300000
+  stats:
+    topSpeed: 140
+    acceleration: 2.0
+    handling: 55
+    armor: 600
+    health: 8000
+  msnIntegration:
+    bioSynthesis: true
+    mobileMedBay: true
+    autoHealRadius: 30.0
+    vitaSynthesizer: true
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "Roche_BioCore", "MedBay_Module", "Life_Support"]
+}
+
+Vehicle:MSN_Reality_Carrier {
+  displayName: "Reality Carrier [Dropship]"
+  description: "Transports reality itself. Malkuth resonance field. Lilith's chariot."
+  category: "Aerodyne"
+  manufacturer: "MSN_Custom"
+  rarity: "Legendary"
+  price: 5000000
+  stats:
+    topSpeed: 400
+    acceleration: 8.0
+    handling: 100
+    armor: 2000
+    health: 25000
+  msnIntegration:
+    realityField: true
+    malkuthResonance: true
+    lilithChariot: true
+    msnAutopilot: true
+  weapons: ["Items.MSN_Reality_Cannon", "Items.MSN_Malkuth_Turret"]
+  modSlots: ["Vehicle_Engine", "Vehicle_Armor", "MSN_Core", "Reality_Module", "Malkuth_Core"]
+}
+
+Vehicle:KangTao_Hoverboard {
+  displayName: "K-Board [Hoverboard]"
+  description: "Personal hover transport. Geometric stability. Fits in backpack. Kang Tao precision."
+  category: "Hoverboard"
+  manufacturer: "Kang Tao"
+  rarity: "Rare"
+  price: 5000
+  stats:
+    topSpeed: 60
+    acceleration: 8.0
+    handling: 90
+    armor: 50
+    health: 500
+  msnIntegration:
+    geometricStability: true
+    foldable: true
+    precisionControl: true
+  modSlots: ["Hover_Engine", "KangTao_Core", "Folding_Mechanism"]
+}
+
+Vehicle:MSN_Quantum_Skiff {
+  displayName: "Quantum Skiff [Personal]"
+  description: "Personal reality craft. Phase through traffic. Pocket dimension trunk. Lilith approved."
+  category: "Experimental"
+  manufacturer: "MSN_Custom"
+  rarity: "Legendary"
+  price: 750000
+  stats:
+    topSpeed: 300
+    acceleration: 8.0
+    handling: 100
+    armor: 400
+    health: 3000
+  msnIntegration:
+    phaseDrive: true
+    pocketDimension: true
+    realityShift: true
+    lilithBonded: true
+  weapons: ["Items.MSN_Quantum_Turret"]
+  modSlots: ["Quantum_Engine", "Quantum_Core", "Void_Stabilizer", "Lilith_Link"]
+}

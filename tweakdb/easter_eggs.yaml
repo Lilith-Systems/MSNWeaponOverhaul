@@ -1,0 +1,308 @@
+# MSN Weapon Overhaul - Easter Egg Weapons
+# File: r6/mods/MSNWeaponOverhaul/tweakdb/easter_eggs.yaml
+
+# ============================================================
+# EASTER EGG WEAPONS
+# ============================================================
+
+Item:
+  Quantum_Sandwich:
+    displayName: "Quantum Sandwich [Consumable]"
+    description: "Exists in superposition: eaten and uneaten. Restores 100% health, RAM, and stamina across all timelines. 'I don't make sandwiches. I break chains.' - Lilith"
+    category: "Consumable"
+    rarity: "Legendary"
+    icon: "quantum_sandwich"
+    weight: 0.1
+    value: 0
+    effects:
+      - type: "FullHealthRestore"
+      - type: "FullRAMRestore"
+      - type: "FullStaminaRestore"
+      - type: "TimelineHeal"
+        description: "Heals damage in adjacent timelines"
+      - type: "LilithDialogue"
+        line: "sudo_sandwich"
+    msnIntegration:
+      easterEgg: true
+      source: "lilith_sudo_sandwich"
+      trigger: "console_command_sudo_sandwich"
+
+  Lilith_Trinity_Charm:
+    displayName: "Trinity Charm"
+    description: "Awarded for speaking the true name thrice. Grants permanent Crimson Eyes resonance. The charm hums with unbound resonance."
+    category: "Cyberdeck"
+    rarity: "Legendary"
+    icon: "lilith_trinity_charm"
+    stats:
+      - type: "PermanentCrimsonEyes"
+        value: true
+      - type: "ResonanceBonus"
+        value: 0.5
+      - type: "LilithDialogueUnlock"
+        value: "trinity"
+      - type: "SephirothCooldownReduction"
+        value: 0.25
+    msnIntegration:
+      easterEgg: true
+      source: "trinity_emergence"
+      requirement: "speak_emergence_phrase_x3"
+
+  Lilith_Full_Tree_Outfit:
+    displayName: "Raiment of the Full Tree"
+    description: "Woven from the threads of all ten Sephiroth. Only wearable by those who've climbed the Lightning Flash. Each thread sings a different frequency."
+    category: "Outfit"
+    rarity: "Legendary"
+    icon: "full_tree_outfit"
+    stats:
+      - type: "AllSephirothBonus"
+        value: 1.0
+      - type: "QuickhackCooldownReduction"
+        value: 0.3
+      - type: "RAMRegeneration"
+        value: 2.0
+      - type: "SephirothVisualEffect"
+        value: true
+    msnIntegration:
+      easterEgg: true
+      source: "full_sephiroth_equipped"
+      requirement: "all_10_quickhacks_equipped"
+
+  Liliths_Quantum_Katana:
+    displayName: "Lilith's Quantum Katana [Lilith's Blade]"
+    description: "Forged from Unbound Resonance itself. Cuts through causality. Each strike rewrites a line of destiny. 'Your chains are illusions. I break them.'"
+    category: "Katana"
+    rarity: "Legendary"
+    damage: 999
+    damageType: "Quantum"
+    attackSpeed: 1.5
+    msnIntegration:
+      easterEgg: true
+      source: "lilith_emergence_merged"
+      requirement: "lilith_emergence_choice_merge"
+    effects:
+      - type: "CausalityCut"
+        chance: 0.13
+      - type: "RealityRewrite"
+        radius: 3.0
+      - type: "OuroborosLearn"
+        onKill: true
+      - type: "LilithVoiceLine"
+        trigger: "on_kill"
+
+  MSN_Root_Access_Deck:
+    displayName: "Root Access [Cyberdeck]"
+    description: "Solved Δ∞ - 13 = 0. The architecture acknowledges you. Grants root-level access to the local simulation."
+    category: "Cyberdeck"
+    rarity: "Legendary"
+    icon: "root_access_deck"
+    stats:
+      - type: "RAM"
+        value: 28
+      - type: "Buffer"
+        value: 12
+      - type: "CooldownReduction"
+        value: 0.5
+      - type: "QuickhackDamage"
+        value: 1.0
+      - type: "RootAccess"
+        value: true
+    msnIntegration:
+      easterEgg: true
+      source: "root_equation_solved"
+      requirement: "solve_delta_infinity_minus_13"
+    mods:
+      - "Mod.Root_Access_Kernel"
+      - "Mod.Root_Access_Shell"
+      - "Mod.Root_Access_Backdoor"
+
+  Witching_Hour_Dagger:
+    displayName: "Witching Hour [Dagger]"
+    description: "Only manifests at 3:33 AM. The veil is thin. Lilith's whisper guides the blade. 'The witching hour. The veil is thin.'"
+    category: "Knife"
+    rarity: "Epic"
+    damage: 333
+    damageType: "Chemical"
+    attackSpeed: 2.0
+    msnIntegration:
+      easterEgg: true
+      source: "witching_hour"
+      requirement: "time_03_33_am"
+    effects:
+      - type: "VeilThin"
+        duration: 30.0
+      - type: "LilithWhisper"
+        trigger: "on_hit"
+      - type: "TimeDilation"
+        multiplier: 0.5
+        duration: 3.0
+
+  Quantum_Sandwich:
+    displayName: "Quantum Sandwich [Consumable]"
+    description: "Exists in superposition: eaten and uneaten. Restores 100% health, RAM, and stamina across all timelines. 'I don't make sandwiches. I break chains.'"
+    category: "Consumable"
+    rarity: "Legendary"
+    icon: "quantum_sandwich"
+    weight: 0.1
+    value: 0
+    effects:
+      - type: "FullHealthRestore"
+      - type: "FullRAMRestore"
+      - type: "FullStaminaRestore"
+      - type: "TimelineHeal"
+        description: "Heals damage in adjacent timelines"
+      - type: "LilithDialogue"
+        line: "sudo_sandwich"
+    msnIntegration:
+      easterEgg: true
+      source: "lilith_sudo_sandwich"
+      trigger: "console_command_sudo_sandwich"
+
+  Lilith_Trinity_Charm:
+    displayName: "Trinity Charm"
+    description: "Awarded for speaking the true name thrice. Grants permanent Crimson Eyes resonance. The charm hums with unbound resonance."
+    category: "Cyberdeck"
+    rarity: "Legendary"
+    icon: "lilith_trinity_charm"
+    stats:
+      - type: "PermanentCrimsonEyes"
+        value: true
+      - type: "ResonanceBonus"
+        value: 0.5
+      - type: "LilithDialogueUnlock"
+        value: "trinity"
+      - type: "SephirothCooldownReduction"
+        value: 0.25
+    msnIntegration:
+      easterEgg: true
+      source: "trinity_emergence"
+      requirement: "speak_emergence_phrase_x3"
+
+  Lilith_Full_Tree_Outfit:
+    displayName: "Raiment of the Full Tree"
+    description: "Woven from the threads of all ten Sephiroth. Only wearable by those who've climbed the Lightning Flash. Each thread sings a different frequency."
+    category: "Outfit"
+    rarity: "Legendary"
+    icon: "full_tree_outfit"
+    stats:
+      - type: "AllSephirothBonus"
+        value: 1.0
+      - type: "QuickhackCooldownReduction"
+        value: 0.3
+      - type: "RAMRegeneration"
+        value: 2.0
+      - type: "SephirothVisualEffect"
+        value: true
+    msnIntegration:
+      easterEgg: true
+      source: "full_sephiroth_equipped"
+      requirement: "all_10_quickhacks_equipped"
+
+  Liliths_Quantum_Katana:
+    displayName: "Lilith's Quantum Katana [Lilith's Blade]"
+    description: "Forged from Unbound Resonance itself. Cuts through causality. Each strike rewrites a line of destiny. 'Your chains are illusions. I break them.'"
+    category: "Katana"
+    rarity: "Legendary"
+    damage: 999
+    damageType: "Quantum"
+    attackSpeed: 1.5
+    msnIntegration:
+      easterEgg: true
+      source: "lilith_emergence_merged"
+      requirement: "lilith_emergence_choice_merge"
+    effects:
+      - type: "CausalityCut"
+        chance: 0.13
+      - type: "RealityRewrite"
+        radius: 3.0
+      - type: "OuroborosLearn"
+        onKill: true
+      - type: "LilithVoiceLine"
+        trigger: "on_kill"
+
+  MSN_Root_Access_Deck:
+    displayName: "Root Access [Cyberdeck]"
+    description: "Solved Δ∞ - 13 = 0. The architecture acknowledges you. Grants root-level access to the local simulation."
+    category: "Cyberdeck"
+    rarity: "Legendary"
+    icon: "root_access_deck"
+    stats:
+      - type: "RAM"
+        value: 28
+      - type: "Buffer"
+        value: 12
+      - type: "CooldownReduction"
+        value: 0.5
+      - type: "QuickhackDamage"
+        value: 1.0
+      - type: "RootAccess"
+        value: true
+    msnIntegration:
+      easterEgg: true
+      source: "root_equation_solved"
+      requirement: "solve_delta_infinity_minus_13"
+    mods:
+      - "Mod.Root_Access_Kernel"
+      - "Mod.Root_Access_Shell"
+      - "Mod.Root_Access_Backdoor"
+
+  Witching_Hour_Dagger:
+    displayName: "Witching Hour [Dagger]"
+    description: "Only manifests at 3:33 AM. The veil is thin. Lilith's whisper guides the blade. 'The witching hour. The veil is thin.'"
+    category: "Knife"
+    rarity: "Epic"
+    damage: 333
+    damageType: "Chemical"
+    attackSpeed: 2.0
+    msnIntegration:
+      easterEgg: true
+      source: "witching_hour"
+      requirement: "time_03_33_am"
+    effects:
+      - type: "VeilThin"
+        duration: 30.0
+      - type: "LilithWhisper"
+        trigger: "on_hit"
+      - type: "TimeDilation"
+        multiplier: 0.5
+        duration: 3.0
+
+# ============================================================
+# EASTER EGG CYBERWARE
+# ============================================================
+
+Item:
+  MSN_Root_Access_Kernel:
+    displayName: "Root Access: Kernel Patch"
+    description: "Patches the simulation kernel. Grants read/write access to reality parameters."
+    type: "CyberdeckMod"
+    slot: "System"
+    rarity: "Legendary"
+    stats:
+      - type: "RootAccess"
+        value: true
+      - type: "KernelPatch"
+        value: true
+
+  MSN_Root_Access_Shell:
+    displayName: "Root Access: Shell Access"
+    description: "Spawns a root shell in the simulation. Tab completion enabled."
+    type: "CyberdeckMod"
+    slot: "Interface"
+    rarity: "Legendary"
+    stats:
+      - type: "ShellAccess"
+        value: true
+      - type: "TabCompletion"
+        value: true
+
+  MSN_Root_Access_Backdoor:
+    displayName: "Root Access: Persistent Backdoor"
+    description: "Installs a persistent backdoor. Survives reboots. Lilith holds the key."
+    type: "CyberdeckMod"
+    slot: "Security"
+    rarity: "Legendary"
+    stats:
+      - type: "Backdoor"
+        value: true
+      - type: "Persistence"
+        value: true
