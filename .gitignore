@@ -48,3 +48,6 @@ runtime/
 # Temp
 temp/
 *.tmp
+
+# OpenCode project config
+.opencode/

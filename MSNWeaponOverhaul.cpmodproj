@@ -8,7 +8,7 @@
     <Description>MSN Weapon Overhaul - Massive expansion of weapons, skills, and vehicles</Description>
     <GameVersion>2.1+</GameVersion>
     <RedmodVersion>1.0</RedmodVersion>
-    <Priority>200</Priority>
+    <Priority>300</Priority>
     <Dependencies>
       <Dependency>REDmod &gt;=1.0.0</Dependency>
       <Dependency>TweakXL &gt;=1.0.0</Dependency>
@@ -21,16 +21,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <TweakDB Include="msn_tweakdb.toml" />
+    <TweakDB Include="tweakdb\msn_tweakdb.toml" />
     <TweakDB Include="tweakdb\weapons.yaml" />
     <TweakDB Include="tweakdb\easter_eggs.yaml" />
     <TweakDB Include="tweakdb\massive_expansion.yaml" />
     <TweakDB Include="tweakdb\massive_weapons.yaml" />
     <TweakDB Include="tweakdb\massive_skills.yaml" />
+    <TweakDB Include="tweakdb\massive_skills.tweakdb" />
+    <TweakDB Include="tweakdb\massive_vehicles.tweakdb" />
     <TweakDB Include="tweakdb\msn_story_vehicles_complete.toml" />
     <TweakDB Include="tweakdb\anthem_javelin_mechanics.yaml" />
     <TweakDB Include="tweakdb\custom_gear_runescape_wow_allods.yaml" />
     <TweakDB Include="tweakdb\abyssal_assets.yaml" />
+    <TweakDB Include="tweakdb\abyssal_assets.tweakdb" />
   </ItemGroup>
 
   <ItemGroup>

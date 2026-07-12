@@ -18,7 +18,7 @@ redscript = ">=1.0.0"
 # None - compatible with MSN Integration mod
 
 [LoadOrder]
-Priority = 100
+Priority = 300
 
 [Categories]
 Weapons = true
@@ -45,9 +45,12 @@ tweakdb = [
   "weapons.yaml",
   "easter_eggs.yaml",
   "massive_expansion.yaml",
+  "massive_weapons.yaml",
+  "massive_skills.yaml",
   "massive_skills.tweakdb",
   "massive_vehicles.tweakdb",
   "abyssal_assets.tweakdb",
+  "msn_tweakdb.toml",
   "msn_story_vehicles_complete.toml",
   "anthem_javelin_mechanics.yaml",
   "custom_gear_runescape_wow_allods.yaml",
@@ -60,7 +63,8 @@ scripts = [
   "msn_ai_companion.reds",
   "weapon_system.reds",
   "nssp_os.reds",
-  "lilith_easter_eggs.reds"
+  "lilith_easter_eggs.reds",
+  "abyssal_integration.reds"
 ]
 
 # Localization
